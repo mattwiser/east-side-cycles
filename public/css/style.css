@@ -5138,6 +5138,18 @@ body {
 .row {
   min-width: 100%; }
 
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 40px;
+  left: 39%;
+  z-index: 1; }
+
+#parallax {
+  margin-bottom: 100px; }
+
 @media only screen and (max-width: 40em) {
   .slider img {
     height: 12em; } }
