@@ -1,0 +1,126 @@
+@import '../bower_components/foundation/scss/normalize';
+@import '../bower_components/foundation/scss/foundation/settings';
+@import '../bower_components/foundation/scss/foundation';
+// Font Imports
+
+// End Font Imports
+
+html, body{
+  background-color:rgba(83, 123, 128, .8);
+}
+
+footer{
+  border-top: 1px solid gray;
+  background-color: gray;
+}
+#offset{
+  position: relative;
+  bottom: rem-calc(45px);
+}
+
+#parallax_container{
+  height:rem-calc(700px);
+  border-bottom: rem-calc(20px) solid gray;
+}
+
+#parallax{
+  height: 100%;
+  width: 100%;
+  background-image:url('/img/eastSideHEADER1_sansLogo.jpg');
+  background-attachment: fixed;
+
+  #parallax_content{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.sub_content {
+  text-align: center;
+  color: white;
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+  h3{
+  color: white;
+  }
+  section{
+    p{
+      font-size: 18px;
+    }
+  }
+}
+
+
+
+
+
+//---Code For Header Parallax Rev 1
+
+  // #logo{
+  //   position: relative;
+  //   display: block;
+  //   width: 30%;
+  //   height: 30%;
+  //   top: 30%;
+  //   left: 37%;
+  //   background: url('/img/logo_gamma.png');
+  //   background-size: contain;
+  //   background-repeat:no-repeat;
+  // }
+
+  // #glyph{
+  //   height: 10%;
+  //   width: 10%;
+  //   display: block;
+  //   background: url('/img/bike_glyph.png');
+  //   background-size: contain;
+  //   background-repeat:no-repeat;
+  //   position: relative;
+  //   top: 56%;
+  //   left: 47.5%;
+  //   opacity: 50%;
+  // }
+
+  // .divider_container_bottom{
+  //   width:100%;
+  //   text-align: center;
+  //   position: relative;
+  //   overflow: hidden;
+  //   :nth-child(1){
+  //     margin-right: 5%;
+  //   }
+  //   :nth-child(2){
+  //     margin-left: 5%;
+  //   }
+  //   .mini_divider_bottom{
+  //     width: 40%;
+  //     height: rem-calc(2px);
+  //     position: relative;
+  //     display: inline-block;
+  //     background-color: gray;
+  //   }
+  // }
+
+  //   .divider_container_top{
+  //   width:100%;
+  //   text-align: center;
+  //   position: relative;
+  //   overflow: hidden;
+  //   :nth-child(1){
+  //     margin-right: 5%;
+  //   }
+  //   :nth-child(2){
+  //     margin-left: 5%;
+  //   }
+  //   .mini_divider_top{
+  //     width: 30%;
+  //     height: rem-calc(2px);
+  //     position: relative;
+  //     display: inline-block;
+  //     background-color: gray;
+  //   }
+  // }
+

@@ -1,9 +1,10 @@
 {
-  "name": "test2",
-  "version": "0.0.1",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "components"
-  ]
+  "name": "east-side-cycles",
+  "version": "0.0.0",
+  "dependencies": {
+    
+    "jquery": "~2.0.3"
+    
+  },
+  "devDependencies": {}
 }
