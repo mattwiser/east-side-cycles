@@ -6,9 +6,7 @@ html(lang="en")
   // <![endif]
   include default-partials/_html-header
 
-  body(class=page)#offset
-    .row.collapse#skrollr-body
-      include default-partials/_header
-      block content
-      include default-partials/_footer
-      include default-partials/_scripts
+  body#skrollr-body#offset(class=page)
+    include default-partials/_header
+    block content
+    include default-partials/_footer

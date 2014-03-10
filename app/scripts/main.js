@@ -11,7 +11,7 @@ function initialize(){
         //Log the current scroll position.
         console.log(data.curTop);
     },
-    forceHeight:false,
+    forceHeight:true,
     smoothScroll:true
   });
 }

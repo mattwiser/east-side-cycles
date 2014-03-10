@@ -6,7 +6,10 @@
 // End Font Imports
 
 html, body{
-  background-color:rgba(83, 123, 128, .8);
+  background-color:rgba(83, 123, 128, .75);
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 footer{
@@ -18,11 +21,11 @@ footer{
 #offset{
   margin-top: rem-calc(-45px);
 }
+
 #parallax_container{
   height:rem-calc(600px);
   z-index: 5;
   position: inherit;
-  margin-bottom: 30px;
   border-bottom: 20px solid gray;
 }
 
@@ -30,7 +33,6 @@ footer{
   height: 100%;
   width: 100%;
   position: inherit;
-
 
   #parallax_content_1{
     height: 100%;
@@ -82,6 +84,7 @@ footer{
 .sub_content {
   text-align: center;
   color: white;
+  position: relative;
   img{
     display: block;
     margin: 0 auto;
