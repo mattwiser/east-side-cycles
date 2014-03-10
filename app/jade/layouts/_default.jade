@@ -5,8 +5,8 @@
 html(lang="en")
   // <![endif]
   include default-partials/_html-header
-
-  body#skrollr-body#offset(class=page)
-    include default-partials/_header
-    block content
-    include default-partials/_footer
+  body
+    #skrollr-body
+      include default-partials/_header
+      block content
+      include default-partials/_footer

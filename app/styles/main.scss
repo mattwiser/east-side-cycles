@@ -6,7 +6,7 @@
 // End Font Imports
 
 html, body{
-  background-color:rgba(83, 123, 128, .75);
+  background-color:rgba(83, 123, 128, .9);
   min-height: 100%;
   margin: 0px;
   padding: 0px;
@@ -18,9 +18,6 @@ footer{
 }
 
 
-#offset{
-  margin-top: rem-calc(-45px);
-}
 
 #parallax_container{
   height:rem-calc(600px);
