@@ -13,26 +13,69 @@ footer{
   border-top: 1px solid gray;
   background-color: gray;
 }
-#offset{
-  position: relative;
-  bottom: rem-calc(45px);
-}
 
+
+#offset{
+  margin-top: rem-calc(-45px);
+}
 #parallax_container{
-  height:rem-calc(700px);
-  border-bottom: rem-calc(20px) solid gray;
+  height:rem-calc(600px);
+  z-index: 5;
+  position: inherit;
+  margin-bottom: 30px;
+  border-bottom: 20px solid gray;
 }
 
 #parallax{
   height: 100%;
   width: 100%;
-  background-image:url('/img/eastSideHEADER1_sansLogo.jpg');
-  background-attachment: fixed;
+  position: inherit;
 
-  #parallax_content{
+
+  #parallax_content_1{
     height: 100%;
     width: 100%;
     overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    background-image:url('/img/eastSideHEADER1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: hidden;
+  }
+
+    #parallax_content_2{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    background-image:url('/img/eastSideHEADER2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: hidden;
+
+  }
+
+    #parallax_content_3{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 3;
+    background-image:url('/img/eastSideHEADER3.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: hidden;
+  }
+
+    #parallax_content_4{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    background-image: linear-gradient(45deg, rgba(35,81,84,.9) 0%, rgba(61,24,51,.5) 50%, rgba(198,45,61,.5) 100%);
+    z-index: 4;
   }
 }
 
