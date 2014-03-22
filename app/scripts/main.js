@@ -12,7 +12,7 @@ function initialize(){
   headerResize();
   // initializeMap();
   $(window).on("resize", headerResize)
-  setInterval(headerFade,15000);
+  setInterval(header_fade,15000);
   
   if ($(window).width() > 767){
     var s = skrollr.init({
@@ -25,6 +25,7 @@ function initialize(){
     });
   }
 }
+
 
 function initializeMap() {
   marker = new google.maps.LatLng(36.177263, -86.749660)
@@ -40,6 +41,7 @@ function initializeMap() {
     });
   };
 }
+
 
 function set_width(){
   $("row").css({"max-width":window.innerWidth});
@@ -62,7 +64,7 @@ function headerResize(){
 
 }
 
-function headerFade(){
+function header_fade(){
 
   var children = $("#parallax").children();
   setTimeout(function(){
