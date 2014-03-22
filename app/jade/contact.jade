@@ -1,0 +1,113 @@
+extends /layouts/_default
+block content
+  .row#contact_content
+    .small-12.medium-8.columns
+      #map-canvas
+    .small-12.medium-4.columns
+      .row
+        .small-12.columns.panel#contactInfo
+          #contactColor
+            h3 103 South 11th Street
+            h4 11-7 Mon-Fri
+            h4 10-6 Sat
+            h4 Phone: (931)-212-1446
+            h4: a(href="mailto:someone@example.com") Email
+          .row.collapse
+            .small-12.columns
+              form
+                .row.collapse
+                  .small-12.columns
+                    label Address
+                      input(type="text", placeholder="Your Address Here")
+                .row.collapse
+                  .small-12.columns
+                    label City
+                      input(type="text", placeholder="Your City Here")
+                .row.collapse
+                  .small-8.columns
+                    label Zip
+                      input(type="text", placeholder="Your Zip Here")
+                  .small-4.columns
+                    label State
+                      select(name="state")
+                        option(value="AK") AK
+                        option(value="AL") AL
+                        option(value="AR") AR
+                        option(value="AZ") AZ
+                        option(value="CA") CA
+                        option(value="CO") CO
+                        option(value="CT") CT
+                        option(value="DC") DC
+                        option(value="DE") DE
+                        option(value="FL") FL
+                        option(value="GA") GA
+                        option(value="HI") HI
+                        option(value="IA") IA
+                        option(value="ID") ID
+                        option(value="IL") IL
+                        option(value="IN") IN
+                        option(value="KS") KS
+                        option(value="KY") KY
+                        option(value="LA") LA
+                        option(value="MA") MA
+                        option(value="MD") MD
+                        option(value="ME") ME
+                        option(value="MI") MI
+                        option(value="MN") MN
+                        option(value="MO") MO
+                        option(value="MS") MS
+                        option(value="MT") MT
+                        option(value="NC") NC
+                        option(value="ND") ND
+                        option(value="NE") NE
+                        option(value="NH") NH
+                        option(value="NJ") NJ
+                        option(value="NM") NM
+                        option(value="NV") NV
+                        option(value="NY") NY
+                        option(value="OH") OH
+                        option(value="OK") OK
+                        option(value="OR") OR
+                        option(value="PA") PA
+                        option(value="RI") RI
+                        option(value="SC") SC
+                        option(value="SD") SD
+                        option(value="TN") TN
+                        option(value="TX") TX
+                        option(value="UT") UT
+                        option(value="VA") VA
+                        option(value="VT") VT
+                        option(value="WA") WA
+                        option(value="WI") WI
+                        option(value="WV") WV
+                        option(value="WY") WY
+
+                .row
+                  .small-12.columns
+                    .button.radius
+                      | Get Directions!
+
+  .row.collapse
+    .small-12.medium-12.medium-centered.columns
+      .row
+        .small-12.medium-4.columns
+          .sub_content.panel
+            img(src="/img/globe.png")
+            h3 Goods
+            section
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe neque pariatur explicabo repudiandae ipsa sit possimus molestiae doloribus. Animi, praesentium corporis harum explicabo impedit.
+        .small-12.medium-4.columns
+          .sub_content.panel
+            img(src="/img/globe.png")
+            h3 Location
+            section
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe neque pariatur explicabo repudiandae ipsa sit possimus molestiae doloribus. Animi, praesentium corporis harum explicabo impedit.
+        .small-12.medium-4.columns
+          .sub_content.panel
+            img(src="/img/globe.png")
+            h3 Events
+            section
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe neque pariatur explicabo repudiandae ipsa sit possimus molestiae doloribus. Animi, praesentium corporis harum explicabo impedit.

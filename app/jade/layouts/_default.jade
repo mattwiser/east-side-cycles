@@ -6,8 +6,8 @@ html(lang="en")
   // <![endif]
   include default-partials/_html-header
   body
-    #skrollr-body
-      include default-partials/_navbar
-      include default-partials/_header
-      block content
-      include default-partials/_footer
+    .row.collapse#color
+      .small-12.columns
+        include default-partials/_navbar
+        block content
+        include default-partials/_footer

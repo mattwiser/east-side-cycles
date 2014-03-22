@@ -6,28 +6,88 @@
 // End Font Imports
 
 html, body{
-  background-color:rgba(83, 123, 128, .9);
-  min-height: 100%;
-  margin: 0px;
-  padding: 0px;
+  height: 100%;
+  width:100%;
 }
-nav{
+
+#map-canvas{
+  height: 500px;
+  width: 100%;
+}
+
+#contactColor{
+  background-color: white;
+  padding: 5px;
+}
+#contactInfo{
+  height: 500px;
+}
+
+#topContent{
+  margin-bottom:15px;
+}
+#contact_content{
+  margin-top: 25px;
+}
+h1, h2, h3, h4, h5, h6, p {
+  color: white;
+}
+
+#color{
+  background-color:rgba(52,69,81,1);
+}
+
+#nav_fader, nav{
   z-index: 100;
 }
+
 footer{
   border-top: 1px solid gray;
   background-color: gray;
 }
 
+#nav_hoist{
+  position: relative;
+  bottom: 45px;
+  margin-bottom: -45px;
+}
+
+.panel{
+  text-align: center;
+}
+
+#headWrap{
+  height:100%;
+  width:100%;
+  position:fixed;
+  z-index: 8;
+  bottom: 45px;
+  margin-bottom: -45px;
+
+}
+
+img.th{
+  padding-bottom: 2px;
+}
+
+#mainWrap{
+  height:100%;
+  width:100%;
+  position:relative;
+  z-index: 9;
+  background-color:rgba(52,69,81,1);
+  bottom: 45px;
+  margin-bottom: -45px;
+  padding-top: 25px;
+  border-top: 20px solid gray;
+}
 
 
 #parallax_container{
-  height:rem-calc(600px);
-  z-index: 5;
-  position: inherit;
-  border-bottom: 20px solid gray;
+  height:rem-calc(760px);
+  z-index: 6;
+  position: relative;
 }
-
 #parallax{
   height: 100%;
   width: 100%;
@@ -39,10 +99,10 @@ footer{
     overflow: hidden;
     position: absolute;
     z-index: 1;
-    background-image:url('/img/eastSideHEADER1.jpg');
-    background-attachment: fixed;
-    background-size: cover;
     display: hidden;
+    img{
+      display: inherit;
+    }
   }
 
     #parallax_content_2{
@@ -51,10 +111,10 @@ footer{
     overflow: hidden;
     position: absolute;
     z-index: 2;
-    background-image:url('/img/eastSideHEADER2.jpg');
-    background-attachment: fixed;
-    background-size: cover;
     display: hidden;
+    img{
+      display: inherit;
+    }
 
   }
 
@@ -64,10 +124,10 @@ footer{
     overflow: hidden;
     position: absolute;
     z-index: 3;
-    background-image:url('/img/eastSideHEADER3.jpg');
-    background-attachment: fixed;
-    background-size: cover;
     display: hidden;
+    img{
+      display: inherit;
+    }
   }
 
     #parallax_content_4{
@@ -78,18 +138,26 @@ footer{
     background-image: linear-gradient(45deg, rgba(35,81,84,.9) 0%, rgba(61,24,51,.5) 50%, rgba(198,45,61,.5) 100%);
     z-index: 4;
   }
+
+  #parallax_content_5{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 5;
+  }
 }
 
 .sub_content {
   text-align: center;
-  color: white;
-  position: relative;
+  height: 100% !important;
+
   img{
     display: block;
     margin: 0 auto;
   }
   h3{
-  color: white;
+
   }
   section{
     p{
@@ -97,75 +165,4 @@ footer{
     }
   }
 }
-
-
-
-
-
-//---Code For Header Parallax Rev 1
-
-  // #logo{
-  //   position: relative;
-  //   display: block;
-  //   width: 30%;
-  //   height: 30%;
-  //   top: 30%;
-  //   left: 37%;
-  //   background: url('/img/logo_gamma.png');
-  //   background-size: contain;
-  //   background-repeat:no-repeat;
-  // }
-
-  // #glyph{
-  //   height: 10%;
-  //   width: 10%;
-  //   display: block;
-  //   background: url('/img/bike_glyph.png');
-  //   background-size: contain;
-  //   background-repeat:no-repeat;
-  //   position: relative;
-  //   top: 56%;
-  //   left: 47.5%;
-  //   opacity: 50%;
-  // }
-
-  // .divider_container_bottom{
-  //   width:100%;
-  //   text-align: center;
-  //   position: relative;
-  //   overflow: hidden;
-  //   :nth-child(1){
-  //     margin-right: 5%;
-  //   }
-  //   :nth-child(2){
-  //     margin-left: 5%;
-  //   }
-  //   .mini_divider_bottom{
-  //     width: 40%;
-  //     height: rem-calc(2px);
-  //     position: relative;
-  //     display: inline-block;
-  //     background-color: gray;
-  //   }
-  // }
-
-  //   .divider_container_top{
-  //   width:100%;
-  //   text-align: center;
-  //   position: relative;
-  //   overflow: hidden;
-  //   :nth-child(1){
-  //     margin-right: 5%;
-  //   }
-  //   :nth-child(2){
-  //     margin-left: 5%;
-  //   }
-  //   .mini_divider_top{
-  //     width: 30%;
-  //     height: rem-calc(2px);
-  //     position: relative;
-  //     display: inline-block;
-  //     background-color: gray;
-  //   }
-  // }
 
