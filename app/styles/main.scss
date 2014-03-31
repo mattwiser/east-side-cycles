@@ -5,13 +5,80 @@
 
 // End Font Imports
 
+$bg-color: #000302;
+$border-color: #333333;
+$bg-texture:url(http://www.transparenttextures.com/patterns/wood.png);
+$h1-color: rgb(89,210,9);
 html, body{
   height: 100%;
   width:100%;
 }
+body{
+  background-color: $bg-color;
+  background-image: $bg-texture;
+}
+h1, h2, h3, h4, h5, h6, {
+  color: $h1-color !important;
+}
+
+#lowdownLogo{
+  width: 50%;
+  margin: 0 auto;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+#lowdownTeam{
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  margin-bottom: 12px;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+#saleLogo{
+  width: 20%;
+  height: auto;
+  position: absolute;
+  left: 1%;
+  z-index: 20;
+}
+
+#pageWrap{
+  @media #{$large-only} {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}
+.gm-style img { max-width: none; }
+.gm-style label { width: auto; display: inline; }
+#goodsWrap{
+  background-color: $bg-color;
+  background-image: $bg-texture;
+}
+
+#offersWrap{
+  width: 100%;
+  height: auto;
+}
+
+#logoContainer{
+  width: 90%;
+  margin-left: 10%;
+  position: absolute;
+  top: 78%;
+  .logo{
+    display: inline-block;
+    img{
+    }
+  }
+}
 
 #map-canvas{
-  height: 500px;
   width: 100%;
 }
 
@@ -20,21 +87,31 @@ html, body{
   padding: 5px;
 }
 #contactInfo{
-  height: 500px;
+  height: auto;
 }
 
 #topContent{
-  margin-bottom:15px;
+
 }
-#contact_content{
-  margin-top: 25px;
-}
-h1, h2, h3, h4, h5, h6, p {
-  color: white;
+#contactContentAnchor, #map{
+  padding-top: 25px;
 }
 
+#contactContent{
+  p{
+    font-size: 14px;
+  }
+}
+
+
 #color{
-  background-color:rgba(52,69,81,1);
+  // background-color:rgba(52,69,81,1);
+  background-color: $bg-color;
+  background-image: $bg-texture;
+
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  height: 100%;
+  width: 100%;
 }
 
 #nav_fader, nav{
@@ -42,8 +119,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 footer{
-  border-top: 1px solid gray;
-  background-color: gray;
+  border-top: 1px solid $border-color;
+  background-color: $border-color;
+  border-left: 2px solid $h1-color;
 }
 
 #nav_hoist{
@@ -54,6 +132,24 @@ footer{
 
 .panel{
   text-align: center;
+  background-color: #4d4d4d !important;
+  background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png) !important;
+  border-left: 2px solid $h1-color;
+  // border-bottom: 1px solid $h1-color;
+  border-top: 1px solid $border-color;
+  border-bottom: 3px solid $border-color;
+  border-right: 1px solid $border-color;
+}
+
+#iframeContainer{
+  height: 100%;
+  width:100%;
+  padding: 0;
+  margin:0;
+  border-left: 2px solid $h1-color;
+  border-top: 1px solid $border-color;
+  border-bottom: 3px solid $border-color;
+  border-right: 1px solid $border-color;
 }
 
 #headWrap{
@@ -75,11 +171,15 @@ img.th{
   width:100%;
   position:relative;
   z-index: 9;
-  background-color:rgba(52,69,81,1);
+  background-color: $bg-color;
+  background-image: $bg-texture;
   bottom: 45px;
   margin-bottom: -45px;
   padding-top: 25px;
-  border-top: 20px solid gray;
+  border-top: 3px solid $h1-color;
+  box-shadow: 0 0 0 20px #4d4d4d;
+
+
 }
 
 
@@ -135,7 +235,8 @@ img.th{
     width: 100%;
     overflow: hidden;
     position: absolute;
-    background-image: linear-gradient(45deg, rgba(35,81,84,.9) 0%, rgba(61,24,51,.5) 50%, rgba(198,45,61,.5) 100%);
+    // background-image: linear-gradient(45deg, rgba(136,167,13,.5) 0%,rgba(28,186,0,.6)  50%, rgba(0,186,143,.5) 100%);
+    // background-color: rgba(28,186,0,.7);
     z-index: 4;
   }
 

@@ -6,8 +6,12 @@ html(lang="en")
   // <![endif]
   include default-partials/_html-header
   body
-    .row.collapse#color
+    .row.collapse
       .small-12.columns
         include default-partials/_navbar
-        block content
-        include default-partials/_footer
+    .row.collapse
+      .small-12.columns
+        #color
+          block offers
+          block content
+          include default-partials/_footer

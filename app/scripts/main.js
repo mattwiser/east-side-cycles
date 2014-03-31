@@ -4,20 +4,30 @@ var marker;
 
 $(document).foundation();
 $(document).ready(initialize);
-google.maps.event.addDomListener(window, 'load', initializeMap);
+// if ($("#map-canvas")){
+//   google.maps.event.addDomListener(window, 'load', initializeMap);
+// }
+
 
 function initialize(){
-  set_width();
-  header_fade();
+  setWidth();
+  headerFade();
   headerResize();
-  // initializeMap();
-  $(window).on("resize", headerResize)
-  setInterval(header_fade,15000);
-  
-  if ($(window).width() > 767){
+  mapResize();
+  detectTouch();
+  $(window).on("resize", headerResize);
+  $(window).triggerHandler('resize');
+  setInterval(headerFade,15000);
+}
+
+
+function detectTouch(){
+  var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+  // console.log(isTouch);
+    if (!isTouch){
     var s = skrollr.init({
     render: function(data) {
-      //Log the current scroll position.
+      // Log the current scroll position.
       // console.log(data.curTop);
     },
     forceHeight:false,
@@ -42,8 +52,27 @@ function initializeMap() {
   };
 }
 
+function mapResize(){
+  if ($(window).load()) {
+    var height = $("#contactContentAnchor").height();
+    var padding = $("#contactContent").css("padding-bottom");
+    var margin = $("#contactContent").css("margin-bottom");
+    padding = parseInt(padding, 10);
+    margin = parseInt(margin, 10);
+    height = height - padding;
+    $("iframe").height(height);
 
-function set_width(){
+    // height = (height/3);
+    // $("iframe").height((height*2));
+
+    // var biosHeight = height;
+    // biosHeight = biosHeight - margin;
+    // biosHeight = biosHeight - padding;
+    // $("#bios").height(biosHeight);
+  };
+}
+
+function setWidth(){
   $("row").css({"max-width":window.innerWidth});
 }
 
@@ -58,27 +87,27 @@ function headerResize(){
   } else {
     $("#mainWrap").css("top", "45px");
   }
-  console.log(height);
+  // console.log(height);
   $("#parallax_container").height(height);
   $("#mainWrap").css("top", height + "px");
 
 }
 
-function header_fade(){
+function headerFade(){
 
   var children = $("#parallax").children();
   setTimeout(function(){
-    console.log("timeout 1");
+    // console.log("timeout 1");
     $(children[1]).fadeOut(800);
     $(children[2]).fadeIn(800);
   }, 5000);
     setTimeout(function(){
-    console.log("timeout 2");
+    // console.log("timeout 2");
     $(children[2]).fadeOut(800);
     $(children[0]).fadeIn(800);
   }, 10000);
     setTimeout(function(){
-    console.log("timeout 3");
+    // console.log("timeout 3");
     $(children[0]).fadeOut(800);
     $(children[1]).fadeIn(800);
   }, 15000);
