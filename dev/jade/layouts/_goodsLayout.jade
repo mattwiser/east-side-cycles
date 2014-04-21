@@ -1,0 +1,26 @@
+doctype html
+//if IE 8
+    <html class="lt-ie9">
+// [if gt IE 8] <!
+html(lang="en")
+  // <![endif]
+  include ../partials/_html-header
+  body
+    #container
+      #nav
+        .row.collapse
+          .small-12.columns
+            include ../partials/_navbar
+
+      #header
+        .row.collapse
+          .small-12.columns
+            header
+              img(src="../img/banner_Goods.jpg")
+      #body
+        .row.collapse
+          .small-12.columns
+            #color
+              block offers
+              block content
+              include ../partials/_footer

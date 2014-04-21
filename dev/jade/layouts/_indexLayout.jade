@@ -1,0 +1,20 @@
+doctype html
+//if IE 8
+    <html class="lt-ie9">
+// [if gt IE 8] <!
+html(lang="en")
+  // <![endif]
+  include ../partials/_html-header
+  body
+    .row.collapse
+      .small-12.columns
+        include ../partials/_navbarIndex
+    .row.collapse#navHoist
+      .small-12.columns.hide-for-touch
+        #headWrap(data-top="transform:translateY(0%)", data-top-center="transform:translateY(-55%)")
+          include ../partials/_parallax
+    .row.collapse
+      .small-12.columns
+        #mainWrap
+          block content
+          include ../partials/_footer
