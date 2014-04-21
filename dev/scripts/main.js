@@ -160,6 +160,7 @@ function parallaxResize(){
   // console.log(height);
   $("#parallax_container").height(height);
   if (height) {
+    height = height + 45;
     $("#mainWrap").css("top", height + "px");
   };
 

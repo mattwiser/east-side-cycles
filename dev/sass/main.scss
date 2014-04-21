@@ -114,8 +114,7 @@ h1, h2, h3, h4, h5, h6, {
     width: inherit;
     height: auto;
     z-index: 12;
-    margin-top: 10px;
-    // border-top: 3px solid $border-color;
+    margin-top: 21px;
     box-shadow: 0 0 0 20px $border-color;
     padding-top: 10px;
     background-image: $bg-texture;
@@ -238,8 +237,6 @@ footer{
   width:100%;
   position:fixed;
   z-index: 8;
-  bottom: 45px;
-  margin-bottom: -45px;
 }
 
 img.th{
@@ -256,8 +253,6 @@ img.th{
   padding-top: 25px;
   // border-top: 3px solid $h1-color;
   box-shadow: 0 0 0 20px $border-color;
-  bottom: 45px;
-  margin-bottom: -45px;
 }
 
 
@@ -341,7 +336,7 @@ img.th{
 }
 
 .subContentColor3{
-  background-color: rgba(225, 225, 102, .85);
+  background-color: rgba(249, 202, 39, .85);
   transition: background-color 0.5s;
 }
 
@@ -382,7 +377,6 @@ img.th{
 }
 
 .subContent:hover{
-
   .subContentColor1{
     background-color: rgba(0, 153, 102, .5);
     transition: background-color 0.5s;
@@ -394,7 +388,7 @@ img.th{
   }
 
   .subContentColor3{
-    background-color: rgba(225, 225, 102, .5);
+    background-color: rgba(249, 202, 39, .5);
     transition: background-color 0.5s;
   }
 
@@ -451,6 +445,10 @@ img.th{
       display: inline-block;
       height: auto;
       width: auto;
+      img{
+        height:auto;
+        width: auto;
+      }
   }
 }
 

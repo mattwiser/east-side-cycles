@@ -5600,7 +5600,7 @@ h1, h2, h3, h4, h5, h6 {
     width: inherit;
     height: auto;
     z-index: 12;
-    margin-top: 10px;
+    margin-top: 21px;
     -webkit-box-shadow: 0 0 0 20px black;
     box-shadow: 0 0 0 20px black;
     padding-top: 10px;
@@ -5687,9 +5687,7 @@ footer {
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 8;
-  bottom: 45px;
-  margin-bottom: -45px; }
+  z-index: 8; }
 
 img.th {
   padding-bottom: 2px; }
@@ -5703,9 +5701,7 @@ img.th {
   background-image: url();
   padding-top: 25px;
   -webkit-box-shadow: 0 0 0 20px black;
-  box-shadow: 0 0 0 20px black;
-  bottom: 45px;
-  margin-bottom: -45px; }
+  box-shadow: 0 0 0 20px black; }
 
 #parallax_container {
   height: 47.5rem;
@@ -5770,7 +5766,7 @@ img.th {
   transition: background-color 0.5s; }
 
 .subContentColor3 {
-  background-color: rgba(225, 225, 102, 0.85);
+  background-color: rgba(249, 202, 39, 0.85);
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s; }
 
@@ -5815,7 +5811,7 @@ img.th {
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s; }
 .subContent:hover .subContentColor3 {
-  background-color: rgba(225, 225, 102, 0.5);
+  background-color: rgba(249, 202, 39, 0.5);
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s; }
 .subContent:hover .subContentColor4 {
@@ -5862,6 +5858,9 @@ img.th {
     display: inline-block;
     height: auto;
     width: auto; }
+    .subContent .subContentImage img {
+      height: auto;
+      width: auto; }
 
 .gm-style img {
   max-width: none; }
