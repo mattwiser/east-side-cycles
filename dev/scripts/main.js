@@ -1,9 +1,24 @@
 /* global document, window, io */
 
 //global variables
-var s;
-var cnt;
+// document.addEventListener("visibilitychange", visibilityChange);
 var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+var parallaxCheck = $("#parallaxContainer").length;
+window.hasfocus = true;
+
+window.onfocus = function(){
+   this.hasfocus = true;
+   console.log("window focus true")
+}
+
+window.onblur = function(){
+   this.hasfocus = false;
+   console.log("window focus false")
+}
+//end global variables
+
+//initalize document and foundation
+$(document).ready(initialize);
 $(document).foundation({
   orbit: {
     animation: 'fade',
@@ -16,172 +31,181 @@ $(document).foundation({
     bullets: false
   }
 });
-$(document).ready(initialize);
+
+//waits for all content(i.e. images) to load
+$(window).load(function(){
+  setWidth();
+  navOffset();
+  subContentResize();
+  parallaxResize();
+  parallaxFade();
+
+});
 
 function initialize(){
+  parallaxSkrollrData();
   skrollrInit();
-  skrollrToggle();
-  setWidth();
-  parallaxFade();
-  parallaxResize();
-  subContentResizeInitial();
-  $(window).on("resize", windowScroll);
-  $(window).on("resize", skrollrToggle);
-  $(window).on("resize", parallaxResize);
+  $(window).on("resize", setWidth);
+  $(window).on("resize", navOffset);
   $(window).on("resize", subContentResize);
-  $(window).on("resize", interiorPageOffset);
-  $(window).triggerHandler('resize');
-  setInterval(parallaxFade,15000);
+  $(window).on("resize", parallaxResize);
+  $(window).on("resize", parallaxAffix);
+  $(window).on("scroll", parallaxAffix);
+
+  window.setInterval(parallaxFade, 15000);
 }
-
+//end initalize document and foundation
 
 //===========================================================================================================//
 //===========================================================================================================//
 //===========================================================================================================//
-
 function skrollrInit(){
   if (!isTouch) {
-    s = skrollr.init({
-      render: function(data) {
-        if (data.curTop>=350 ) {
-          $("nav").css("background-color", "rgba(0,0,0,1)")
-        };
-      },
+    var s = skrollr.init({
+      render: function(data){},
       forceHeight:false,
       smoothScroll:true
     });
-    if ($("#navHoist").length) {
-      window.onbeforeunload = function(e) {
-        window.scrollTo(0, 0);
-      };
-    };
   };
 }
-
-function skrollrToggle(){
-
-  var mediaWidth = $(window).width() / parseFloat($("body").css("font-size"));
-
-
-  if (mediaWidth<64 && isTouch) {
-    $("nav").css("background-color", "black");
-  }
-  if (mediaWidth>64  && !s && !isTouch){
-      window.location.reload();
-  }
-}
-
-
-function windowScroll(){
-  if ($("#navHoist").length && !isTouch) {
-    window.scrollTo(0, 0);
-  };
-}
-
-function textResize(){
-  var text = $(".subContentText");
-  var textHeight = $(".subContentText").height();
-  $(text).css("font-size", textHeight * .2);
-}
-
-function subContentResizeInitial(){
-
-    $(window).load(function(){
-
-      var height = $(".subContentImage").height();
-      var width = $(".subContent").width();
-
-
-
-      $(".subContent").height(height);
-
-      $(".subContentColor1").height(height);
-      $(".subContentColor1").width(width);
-
-      $(".subContentColor2").height(height);
-      $(".subContentColor2").width(width);
-
-      $(".subContentColor3").height(height);
-      $(".subContentColor3").width(width);
-
-      $(".subContentColor4").height(height);
-      $(".subContentColor4").width(width);
-
-      textResize();
-
-  });
-};
-function subContentResize(){
-  var height = $(".subContentImage").height();
-  var width = $(".subContent").width();
-  var text = $(".subContentText");
-  var textHeight = $(".subContentText").height();
-
-
-  $(".subContent").height(height);
-
-
-  $(".subContentColor1").height(height);
-  $(".subContentColor1").width(width);
-
-  $(".subContentColor2").height(height);
-  $(".subContentColor2").width(width);
-
-  $(".subContentColor3").height(height);
-  $(".subContentColor3").width(width);
-
-  $(".subContentColor4").height(height);
-  $(".subContentColor4").width(width);
-
-  $(text).css("font-size", textHeight * .2);
-}
-
-function interiorPageOffset(){
-  var height = $("#header").height();
-  $("#body").css("top", height);
-}
-
 
 function setWidth(){
   $("row").css({"max-width":window.innerWidth});
 }
 
+function navOffset(imageHeight){
+  if (!parallaxCheck) {
+  var offsetHeight = $("#nav").height();
+  var header = $("#header");
+  var body = $("#body");
+
+  $(header).css("top", offsetHeight + "px");
+  $(body).css("top", offsetHeight + "px");
+  };
+}
+
+function subContentResize(){
+  var imageHeight = $(".subContentImage").height();
+  var imageWidth = $(".subContentImage").width();
+
+  $(".subContentColor").height(imageHeight);
+  $(".subContentColor").width(imageWidth);
+
+  subContentTextResize();
+}
+
+function subContentTextResize(){
+  var text = $(".subContentText");
+  var textHeight = $(".subContentText").height();
+  $(text).css("font-size", textHeight * .9);
+}
+
 function parallaxResize(){
 
-  if ($("#headerImage1").height() != 0) {
-    var height = $("#headerImage1").height();
-  } else if($("#headerImage2").height() != 0){
-    var height = $("#headerImage2").height();
-  } else if($("#headerImage3").height() != 0){
-    var height = $("#headerImage3").height();
-  } else if (!height) {
-    $("#mainWrap").css("top", "24px");
-  }
-  // console.log(height);
-  $("#parallax_container").height(height);
-  if (height) {
-    height = height + 45;
-    $("#mainWrap").css("top", height + "px");
-  };
+  if (parallaxCheck) {
+    var imageHeight = $(".parallaxImage").height();
+    var imageWidth = $(".parallaxImage").width();
+    var navHeight = $("#nav").height();
+    var text1 = $(".parallaxCaption1");
+    var text2 = $(".parallaxCaption2");
+    var text3 = $(".parallaxCaption3");
 
+    $("#parallaxContainer").height(imageHeight);
+
+    $(text1).css("font-size", imageHeight * 0.07);
+    $(text2).css("font-size", imageHeight * 0.05);
+    $(text3).css("font-size", imageHeight * 0.1);
+
+    $("#parallaxGradient").height(imageHeight);
+    $("#parallaxGradient").width(imageWidth);
+
+    $("#header").css("top", navHeight);
+    $("#body").css("top", ((imageHeight*.9) + navHeight));
+  }
 }
 
 function parallaxFade(){
-
-  var children = $("#parallax").children();
-  setTimeout(function(){
-    // console.log("timeout 1");
-    $(children[1]).fadeOut(800);
-    $(children[2]).fadeIn(800);
-  }, 5000);
+  if (!isTouch && parallaxCheck && window.hasfocus) {
+    var images = $(".parallaxImage");
     setTimeout(function(){
-    // console.log("timeout 2");
-    $(children[2]).fadeOut(800);
-    $(children[0]).fadeIn(800);
-  }, 10000);
-    setTimeout(function(){
-    // console.log("timeout 3");
-    $(children[0]).fadeOut(800);
-    $(children[1]).fadeIn(800);
-  }, 15000);
+      $(images[1]).fadeOut(800);
+      $(images[2]).fadeIn(800);
+    }, 0);
+      setTimeout(function(){
+      $(images[2]).fadeOut(800);
+      $(images[0]).fadeIn(800);
+    }, 5000);
+      setTimeout(function(){
+      $(images[0]).fadeOut(800);
+      $(images[1]).fadeIn(800);
+    }, 10000);
+  }
 }
+
+function parallaxAffix(){
+  if (parallaxCheck) {
+    var scrollPosition = $(window).scrollTop();
+    var parallaxOffset = $(".parallaxImage").height();
+    var navHeight = $("#nav").height();
+    var isFixed = $("#parallaxContainer").css("position") === "fixed";
+
+
+    parallaxOffset = (parallaxOffset*.615);
+    parallaxOffset = (parallaxOffset - navHeight);
+    if (scrollPosition >= (parallaxOffset-350)) {logoMover()}
+    if (scrollPosition > parallaxOffset && !isFixed && !isTouch) {
+
+      $("#parallaxContainer").css("position", "fixed");
+      $("#parallaxContainer").css("transform", "translateY(-" + (scrollPosition-50) + "px)");
+
+    } else if (scrollPosition < parallaxOffset && isFixed && !isTouch){
+      $("#parallaxContainer").css("transform", "translateY(0px)");
+      $("#parallaxContainer").css("position", "absolute");
+    } else if (isTouch){
+      // maybe set it to relative? you have to change #body's top positioning if you do that
+      // $("#parallaxContainer").css("position", "relative");
+    }
+  }
+}
+function parallaxSkrollrData(){
+  if (parallaxCheck && !isTouch) {
+    var gradient = $( "#parallaxGradient");
+    var height = $(".parallaxImage").height();
+
+    height = height * .75;
+    height = Math.round(height);
+
+    var string = height.toString();
+    var data = $(gradient).data();
+    var keys = $.map(data , function(value, key) { return key; });
+
+    if (!keys.length) {
+      $(gradient).attr( "data-0", "background-image:linear-gradient(45deg, rgba(117,117,117, .65) 0%, rgba(206,145,12, .85) 50%,  rgba(117,117,117, .65) 100%);" );
+      $(gradient).attr( "data-"+string, "background-image:linear-gradient(0deg, rgba(117,117,117, 1) 0%, rgba(206,145,12, 1) 50%,  rgba(117,117,117, 1) 100%);");
+      $(gradient).data( "data-0", "background-image:linear-gradient(45deg, rgba(117,117,117, .65) 0%, rgba(206,145,12, .85) 50%,  rgba(117,117,117, .65) 100%);" );
+      $(gradient).data( "data-"+string, "background-image:linear-gradient(0deg, rgba(117,117,117, 1) 0%, rgba(206,145,12, 1) 50%,  rgba(117,117,117, 1) 100%);");
+    } else {
+      console.log("attr and data already present");
+    }
+  }
+}
+
+
+var logoMover = function(){
+  var logos = $(".logo");
+  var time = 00;
+  for (var i = logos.length - 1; i >= 0; i--) {
+  time = time + 250;
+  logoMoves(logos[i], time);
+  };
+}
+
+function logoMoves(logo, time){
+  setTimeout(function(){$(logo).addClass("translateX")}, time);
+}
+
+
+
+
+
+

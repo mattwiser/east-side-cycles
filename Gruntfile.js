@@ -46,14 +46,6 @@ module.exports = function(grunt) {
       }
     },
 
-  autoprefixer: {
-    build: {
-      expand: true,
-      cwd: 'dist',
-      src: [ '**/*.css' ],
-      dest: 'dist'
-    }
-  },
 
   watch: {
 
@@ -89,7 +81,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
@@ -98,7 +89,7 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'stylesheets',
     'Compiles the stylesheets.',
-    [ 'sass', 'autoprefixer' ]
+    [ 'sass' ]
   );
 
   grunt.registerTask(

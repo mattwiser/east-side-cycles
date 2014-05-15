@@ -1,0 +1,63 @@
+#parallaxContainer{
+  z-index: 5;
+  position: absolute;
+  width:100%;
+
+  .parallaxImage{
+    position: absolute;
+    z-index: 3;
+  }
+
+  #parallaxGradient{
+    z-index: 4;
+    position: absolute;
+    // background-image:linear-gradient(45deg, rgba(117,117,117, .9) 0%, rgba(206,145,12, .9) 50%,  rgba(117,117,117, .9) 100%);
+  }
+}
+
+#eastSideLogo{
+  position: absolute;
+  z-index:  5;
+  top: 12%;
+  width: 80%;
+  margin: 0 auto;
+  left: 10%;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+#parallaxCaption{
+  top: 35%;
+  margin: 0 auto;
+  z-index: 100;
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  font-family: navFont !important;
+  text-align: center;
+  .parallaxCaption1{
+    // margin-bottom: 5%;
+    font-family: navFont !important;
+  }
+  .parallaxCaption2{
+    margin-bottom: 5%;
+    color: white !important;
+    font-family: navFont !important;
+  }
+  .parallaxCaption3{
+    font-family: navFont !important;
+  }
+}
+#bikeGlyph{
+  position: absolute;
+  height: auto;
+  z-index: 5;
+  width: 9%;
+  top: 49%;
+  left: 45.5%;
+  img{
+
+  }
+}

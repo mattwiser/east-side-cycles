@@ -1,19 +1,36 @@
 extends ./layouts/_goodsLayout
 block offers
-  .row
-    .small-12.columns
+  #paper
+    img(src="../img/paperEdge1.png")
+  .row#goodsContent
+    .small-12.large-7.columns
+      h2.headerTitle
+        | Goods >> Where the Rubber hits the Road
+      p
+        | Scroll through our prime line up and special deals. Drop by 5 points where our knowldegeable staff is ready to assist every level of cycling enthusiasm. Monday through Friday 11-7 or Saturday 10-6.
+      p
+        | Questions or Rental Inquiries? Call us at (615)-469-1079
       .row.collapse
-        .small-12.columns.panel
-          .row
-            .small-12.medium-8.columns
-              include ./partials/_orbit
-            .small-12.medium-4.columns
-              h2
-                | East Nasty's Go To Cycle Shop
-              p
-                | Eastside Cycles is a family owned full service bicycle shop. We sell, rent, and repair bicycles. We've been known to ride them occasionally too! Visit us right in the middle of 5 Points.
-              .button.large.radius
-                | Hello World
+        .small-12.columns
+          img.goodsLogo(src="../img/brandLogo_1.png")
+          img.goodsLogo(src="../img/brandLogo_2.png")
+          img.goodsLogo(src="../img/brandLogo_3.png")
+          img.goodsLogo(src="../img/brandLogo_4.png")
+          img.goodsLogo(src="../img/brandLogo_5.png")
+          img.goodsLogo(src="../img/purefix.png")
+    .small-12.large-5.columns
+      include ./partials/_orbit
+  #paper2
+    img(src="../img/paperEdge1.png")
+
+
+
 
 block content
-  include ./partials/_goodsItems
+  #goodsColor
+    include ./partials/_goodsItems
+
+
+
+
+

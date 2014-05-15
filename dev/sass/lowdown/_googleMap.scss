@@ -1,0 +1,14 @@
+#iframeContainer{
+  height: 100%;
+  width:100%;
+  padding: 0;
+  margin:0;
+  border-left: 2px solid $h1-color;
+  border-top: 1px solid $border-color;
+  border-bottom: 3px solid $border-color;
+  border-right: 1px solid $border-color;
+}
+
+
+.gm-style img { max-width: none; }
+.gm-style label { width: auto; display: inline; }

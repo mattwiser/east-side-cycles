@@ -1,18 +1,46 @@
-extends ./layouts/_indexLayout
-block content
-  .row#topContent
+extends ./layouts/_defaultLayout
+block header
+  .row.collapse
     .small-12.columns
-      .row
-        .small-12.columns.panel
-          .row
-            .small-12.medium-8.columns
-              img.th(src="../img/bikeFiller.jpeg")
-            .small-12.medium-4.columns
-              h2
-                | East Nasty's Go To Cycle Shop
-              p
-                | Eastside Cycles is a family owned full service bicycle shop. We sell, rent, and repair bicycles. We've been known to ride them occasionally too! Visit us right in the middle of 5 Points.
-              .button.large.radius
-                | Find Us!
+      include ./partials/_parallax
+
+block content
+  #paper
+    img(src="../img/paperEdge1.png")
+  .row#indexContent
+    .small-12.columns
+      h2.headerTitle
+        | Home >> Historic East Nashville
+    .small-12.large-7.columns
+      img.storeFront(src="../img/storeFronts.jpg")
+      p.mainCaption1
+        |  Eastside Cycles is a family owned full service bicycle shop. We sell, rent, and repair bicycles. We've been known to ride them occasionally too! Visit us right in the middle of 5 Points.
+      p.mainCaption2
+        | Rides N Whatnot, Keep the Rubber Side Down. Meet up with us and lick up the cycling goodness with a follow on tumblr or Facebook. Oh, and let us get between your legs.
+      p.mainCaption2
+        | Rides N Whatnot, Keep the Rubber Side Down. Meet up with us and lick up the cycling goodness with a follow on tumblr or Facebook. Oh, and let us get between your legs.
+
+    .small-12.large-5.columns
+      include ./partials/_orbit
 
   include ./partials/_subContent
+
+
+
+
+
+  //-     .row.collapse
+  //-       .small-12.medium-6.columns
+  //-         img(src="../img/storeFronts.jpg")
+  //-       .small-12.medium-6.columns
+  //-         p.mainCaption
+  //-           | Eastside Cycles is a family owned full service bicycle shop. We sell, rent, and repair bicycles. We've been known to ride them occasionally too! Visit us right in the middle of 5 Points.
+  //-         p.mainCaption
+  //-           | Rides N Whatnot, Keep the Rubber Side Down. Meet up with us and lick up the cycling goodness with a follow on tumblr or Facebook. Oh, and let us get between your legs.
+  //-     .row.collapse
+  //-       .small-12.columns
+  //-         h4
+  //-           | Solid Dependable Silent
+  //-         h4
+  //-           | My bike is my horse, my fighter jet, myisland, my friend.
+  //-
