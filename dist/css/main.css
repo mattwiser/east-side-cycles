@@ -3282,16 +3282,16 @@ ul.pagination {
 .panel {
   border-style: solid;
   border-width: 1px;
-  border-color: #555555;
+  border-color: #d8d8d8;
   margin-bottom: 1.25rem;
   padding: 1.25rem;
-  background: #606060; }
+  background: #f2f2f2; }
   .panel > :first-child {
     margin-top: 0; }
   .panel > :last-child {
     margin-bottom: 0; }
   .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p {
-    color: white; }
+    color: #333333; }
   .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
     line-height: 1;
     margin-bottom: 0.625rem; }
@@ -3788,9 +3788,9 @@ div.switch {
     position: relative; } }
 
 table {
-  background: white;
+  background: rgba(44, 28, 14, 0.5);
   margin-bottom: 1.25rem;
-  border: solid 1px #dddddd; }
+  border: solid 1px #2c1c0e; }
   table thead,
   table tfoot {
     background: whitesmoke; }
@@ -3799,24 +3799,24 @@ table {
     table tfoot tr th,
     table tfoot tr td {
       padding: 0.5rem 0.625rem 0.625rem;
-      font-size: 0.875rem;
+      font-size: 1.125rem;
       font-weight: bold;
-      color: #222222;
+      color: #fcf1d9;
       text-align: left; }
   table tr th,
   table tr td {
     padding: 0.5625rem 0.625rem;
-    font-size: 0.875rem;
-    color: #222222; }
+    font-size: 1rem;
+    color: #fcf1d9; }
   table tr.even, table tr.alt, table tr:nth-of-type(even) {
-    background: #f9f9f9; }
+    background: rgba(84, 82, 9, 0.3); }
   table thead tr th,
   table tfoot tr th,
   table tbody tr td,
   table tr td,
   table tfoot tr td {
     display: table-cell;
-    line-height: 1.125rem; }
+    line-height: 1.25rem; }
 
 .tabs {
   *zoom: 1;
@@ -5601,9 +5601,18 @@ h1, h2, h3, h4 {
   color: white !important;
   font-family: headerFont; }
 
+table {
+  margin-bottom: 3%;
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto; }
+
 p, h6, h5 {
   font-family: bodyFont;
-  color: #382101 !important; }
+  color: #212121 !important; }
+
+caption {
+  background-color: white; }
 
 #nav {
   padding: 0;
@@ -5624,47 +5633,149 @@ p, h6, h5 {
       display: inline-block;
       margin-left: 2%; }
 
+.orangeLinkSmall {
+  color: #e93502 !important;
+  font-weight: bold; }
+
+.orangeLink {
+  color: #e93502;
+  font-weight: bold;
+  font-size: 1.125rem; }
+
+.lightOrangeLink {
+  color: #e95402;
+  font-weight: bold; }
+
+.schedule {
+  font-family: helvetica;
+  font-weight: bold !important; }
+
+.goodsDescription {
+  height: 195px;
+  max-height: 195px;
+  overflow: hidden; }
+
+.goodsImage {
+  position: relative;
+  z-index: 2; }
+
+.goodsImageActive {
+  position: relative;
+  z-index: 3 !important;
+  -webkit-transform: scale(1.1); }
+
+.lowdownImage {
+  margin: 0 auto;
+  display: inline-block; }
+  @media only screen and (max-width: 40em) {
+    .lowdownImage {
+      width: 100%;
+      margin: 0 0 5% 0; } }
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .lowdownImage {
+      width: 50%; } }
+  @media only screen and (min-width: 40.063em) {
+    .lowdownImage {
+      float: left;
+      margin-right: 3%; } }
+
+.lowdownOffset {
+  margin-top: 2%; }
+
+.lowdownCategory {
+  width: 100%; }
+
+.lowdownCaption {
+  color: #ffe7b4 !important; }
+  @media only screen and (min-width: 40.063em) {
+    .lowdownCaption {
+      float: left; } }
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .lowdownCaption {
+      width: 45%; } }
+  @media only screen and (min-width: 64.063em) and (max-width: 90em) {
+    .lowdownCaption {
+      width: 45%; } }
+
+#mapAnchor, #rentalsAnchor, #adventuresAnchor, #apparelAnchor, #partsAnchor {
+  position: relative;
+  height: 1px;
+  bottom: 45px; }
+
+.title {
+  color: #ffe7b4 !important;
+  font-size: 140%;
+  font-family: bodyFont; }
+
+.price {
+  padding-top: 8px;
+  margin-right: 16px;
+  display: inline-block; }
+
 .price, .description {
-  color: white !important; }
+  color: #ffe7b4 !important; }
 
-.goodsLogo:nth-of-type(1) {
-  width: 33%; }
-
-.goodsLogo:nth-of-type(2) {
-  width: 33%; }
-
-.goodsLogo:nth-of-type(3) {
-  width: 33%; }
-
-.goodsLogo:nth-of-type(4) {
-  width: 33%; }
-
-.goodsLogo:nth-of-type(5) {
-  width: 33%; }
-
-.goodsLogo:nth-of-type(6) {
-  width: 33%; }
+@media only screen and (max-width: 40em) {
+  #goodsLogos {
+    width: 100%; } }
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  #goodsLogos {
+    width: 100%; } }
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  #goodsLogos {
+    width: 86%; } }
+#goodsLogos .goodsLogo {
+  display: inline-block; }
+#goodsLogos .goodsLogo:nth-of-type(1) {
+  width: 28%; }
+#goodsLogos .goodsLogo:nth-of-type(2) {
+  width: 20%; }
+#goodsLogos .goodsLogo:nth-of-type(3) {
+  width: 36%; }
+#goodsLogos .goodsLogo:nth-of-type(4) {
+  width: 28%; }
+#goodsLogos .goodsLogo:nth-of-type(5) {
+  width: 25%;
+  margin-right: 2%; }
+#goodsLogos .goodsLogo:nth-of-type(6) {
+  width: 28%; }
 
 #header, #body {
   position: relative; }
 
 #color {
   background-color: #d6bc98;
-  background-image: url(http://www.transparenttextures.com/patterns/natural-paper.png); }
+  background-image: url(../img/natural-paper.png); }
 
 .headerTitle {
-  color: #2c1c0e !important; }
+  color: #3D320D !important; }
+  .headerTitle span {
+    font-size: 82%; }
 
-.title {
-  border-bottom: 1px solid #63ebb2;
-  display: inline; }
+.th {
+  position: relative;
+  z-index: 1; }
 
 footer {
   background-color: #2c1c0e; }
 
-#goodsColor {
+#goodsColor, #lowdownColor, #eventsColor, #indexColor {
   background-color: #2c1c0e;
+  background-image: url(../img/dark-wood.png);
   padding-top: 1%; }
+
+.panel {
+  background-color: #012422;
+  background-image: url(../img/black-paper.png);
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  border-color: #2c1c0e !important; }
+
+#wrenchbarContent2 {
+  padding-top: 4%;
+  background-color: #2c1c0e;
+  background-image: url(../img/dark-wood.png);
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ }
 
 #indexContent, #goodsContent, #eventsContent, #lowdownContent, #wrenchbarContent {
   position: relative;
@@ -5683,7 +5794,7 @@ footer {
 #paper2 {
   position: relative;
   z-index: 0;
-  margin-bottom: -1%; }
+  margin-bottom: -2%; }
   #paper2 img {
     -webkit-transform: rotate(180deg);
     margin-top: -20%;
@@ -5703,7 +5814,8 @@ footer {
   text-align: center;
   margin: 0;
   padding-bottom: 2%;
-  font-family: navFont; }
+  font-family: navFont;
+  text-shadow: 6px 6px 7px #363b52; }
 .subContent .one {
   background-color: rgba(11, 105, 165, 0.85);
   transition: background-color .75s; }
@@ -5798,12 +5910,13 @@ footer {
     z-index: 3; }
   #parallaxContainer #parallaxGradient {
     z-index: 4;
-    position: absolute; }
+    position: absolute;
+    background-image: linear-gradient(45deg, rgba(117, 117, 117, 0.65) 0%, rgba(206, 145, 12, 0.85) 50%, rgba(117, 117, 117, 0.65) 100%); }
 
 #eastSideLogo {
   position: absolute;
   z-index: 5;
-  top: 12%;
+  top: 10%;
   width: 80%;
   margin: 0 auto;
   left: 10%; }
@@ -5812,7 +5925,7 @@ footer {
     height: auto; }
 
 #parallaxCaption {
-  top: 35%;
+  top: 38%;
   margin: 0 auto;
   z-index: 100;
   width: 100%;
@@ -5834,14 +5947,14 @@ footer {
   height: auto;
   z-index: 5;
   width: 9%;
-  top: 49%;
+  top: 57%;
   left: 45.5%; }
 
 #logoContainer {
   width: 100%;
   margin: 0 auto;
   position: absolute;
-  top: 61.5%;
+  top: 70%;
   padding-left: 6% !important;
   z-index: 5; }
   #logoContainer #giant {
@@ -5916,17 +6029,23 @@ footer {
   .slider {
     margin-bottom: 15px !important; } }
 
-@media only screen and (max-width: 40em) {
-  .storeFront {
-    margin-bottom: 4%; } }
-@media only screen and (min-width: 40.063em) {
-  .storeFront {
-    width: 70%;
-    height: auto;
-    float: left;
-    margin-right: 3%; } }
+.storeFront {
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75); }
+  @media only screen and (max-width: 40em) {
+    .storeFront {
+      margin-bottom: 4%; } }
+  @media only screen and (min-width: 40.063em) {
+    .storeFront {
+      width: 50%;
+      height: auto;
+      float: left;
+      margin-right: 3%; } }
 
 .orbit-container {
+  position: relative;
+  z-index: 3 !important;
   width: 100%;
   height: auto;
   margin: 0 auto; }
@@ -5938,12 +6057,53 @@ footer {
     width: 100%;
     height: auto; }
 
-#goodsItems h3 {
-  white-space: nowrap;
-  overflow: hidden; }
-
 #subContent {
-  margin-bottom: 0.5em; }
+  padding-bottom: 0.5em; }
 
 #subContent, #goodsItems {
   margin-top: 1em; }
+
+@media only screen and (max-width: 40em) {
+  .wrenchBarImage1 {
+    margin-bottom: 4%; } }
+
+.wrenchBarCaption1 {
+  position: relative;
+  z-index: 1; }
+
+.wrenchBarCaption2 {
+  position: relative;
+  z-index: 1; }
+
+.wrenchBarMenu {
+  text-align: center;
+  color: #e93502 !important; }
+
+.wrenchBarCategory {
+  text-align: center;
+  color: #e93502 !important;
+  margin-bottom: 4%;
+  border-bottom: 2px solid #ffe7b4; }
+
+#tuneups .tuneup {
+  color: #ffe7b4 !important;
+  padding: 8px; }
+  #tuneups .tuneup span {
+    font-family: headerFont;
+    font-size: 180%;
+    border-bottom: 2px solid #ffe7b4; }
+
+.tuneupNote {
+  color: #ffe7b4 !important; }
+
+#socialMedia {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding-top: 2px;
+  float: right; }
+  #socialMedia img {
+    height: 30px;
+    width: auto;
+    margin: 0;
+    padding: 0; }

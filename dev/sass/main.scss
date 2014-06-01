@@ -1,4 +1,4 @@
-//Font Definitions
+  //Font Definitions
 
 @font-face
 {
@@ -38,12 +38,20 @@ h1, h2, h3, h4, {
   color: $h1-color !important;
   font-family: headerFont;
 }
+table{
+  margin-bottom: 3%;
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
 
+}
 p, h6, h5{
   font-family: bodyFont;
-  color: rgb(56,33,1) !important;
+  color: #212121!important;
 }
-
+caption{
+  background-color: white;
+}
 #nav{
   padding:0;
   margin:0;
@@ -67,52 +75,175 @@ p, h6, h5{
     }
   }
 }
+.orangeLinkSmall{
+  color: #e93502 !important;
+  font-weight: bold;
+}
+.orangeLink{
+  color: #e93502;
+  font-weight: bold;
+  font-size: rem-calc(18px);
+}
+.lightOrangeLink{
+  color: #e95402;
+  font-weight: bold;
+}
 
+.schedule{
+  font-family: helvetica;
+  font-weight: bold !important;
+}
+.goodsDescription{
+  height: 195px;
+  max-height: 195px;
+  overflow: hidden;
+}
+.goodsImage{
+  position: relative;
+  z-index: 2;
+}
+.goodsImageActive{
+  position: relative;
+  z-index: 3 !important;
+  -webkit-transform: scale(1.1);
+}
+.lowdownInfo{
+  // font-family: bodyFont;
+}
+.lowdownImage{
+  margin: 0 auto;
+  display: inline-block;
+  @media #{$small-only} {
+    width: 100%;
+    margin: 0 0 5% 0;
+  }
+  @media #{$medium-only} {
+    width: 50%;
+  }
+  @media #{$medium-up} {
+    float:left;
+    margin-right: 3%;
+  }
+
+}
+
+.lowdownOffset{
+  margin-top: 2%;
+}
+.lowdownCategory{
+  width: 100%;
+}
+.lowdownCaption{
+  color: #ffe7b4 !important;
+  @media #{$medium-up} {
+    float: left;
+  }
+  @media #{$medium-only} {
+    width: 45%;
+  }
+  @media #{$large-only} {
+    width: 45%;
+  }
+}
+#mapAnchor, #rentalsAnchor, #adventuresAnchor, #apparelAnchor, #partsAnchor{
+  position: relative;
+  height: 1px;
+  bottom:45px;
+}
+.title{
+  color: #ffe7b4 !important;
+  font-size: 140%;
+  font-family: bodyFont;
+}
+.price{
+  padding-top: 8px;
+  margin-right: 16px;
+  display: inline-block;
+
+}
 .price, .description {
-  color: white !important;
-}
-.goodsLogo:nth-of-type(1){
-  width:33%;
-}
-.goodsLogo:nth-of-type(2){
-  width:33%;
-}
-.goodsLogo:nth-of-type(3){
-  width:33%;
-}
-.goodsLogo:nth-of-type(4){
-  width:33%;
-}
-.goodsLogo:nth-of-type(5){
-  width:33%;
-}
-.goodsLogo:nth-of-type(6){
-  width:33%;
+  color: #ffe7b4 !important;
 }
 
+#goodsLogos{
+
+  @media #{$small-only} {
+    width: 100%;
+  }
+  @media #{$medium-only} {
+    width: 100%;
+  }
+  @media #{$large-only} {
+    width: 86%;
+  }
+  .goodsLogo{
+    display: inline-block;
+  }
+  .goodsLogo:nth-of-type(1){
+    width:28%;
+  }
+  .goodsLogo:nth-of-type(2){
+    width:20%;
+  }
+  .goodsLogo:nth-of-type(3){
+    width:36%;
+  }
+  .goodsLogo:nth-of-type(4){
+    width:28%;
+  }
+  .goodsLogo:nth-of-type(5){
+    width:25%;
+    margin-right: 2%;
+
+  }
+  .goodsLogo:nth-of-type(6){
+    width:28%;
+  }
+}
 #header, #body{
   position: relative;
 }
 #color{
 
   background-color: #d6bc98;
-  background-image: url(http://www.transparenttextures.com/patterns/natural-paper.png);
+  background-image: url(../img/natural-paper.png);
 }
 .headerTitle{
-  color: #2c1c0e !important;
+  color: #3D320D !important;
+  span{
+    font-size: 82%;
+  }
 }
-.title{
-  border-bottom: 1px solid rgb(99,235, 178);
-  display: inline;
+.th{
+  position: relative;
+  z-index: 1;
 }
 footer{
+
   background-color: #2c1c0e;
 }
-#goodsColor{
-  background-color: #2c1c0e;
+#goodsColor, #lowdownColor, #eventsColor, #indexColor{
+background-color:#2c1c0e;
+background-image: url(../img/dark-wood.png);
   padding-top: 1%;
 }
 .panel{
+background-color: #012422;
+background-image: url(../img/black-paper.png);
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+  border-color: #2c1c0e !important;
+
+  @media #{$medium-up} {
+    // margin-top: 3%;
+  }
+}
+
+#wrenchbarContent2{
+padding-top: 4%;
+background-color: #2c1c0e;
+background-image: url(../img/dark-wood.png);
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 
 }
 #indexContent, #goodsContent, #eventsContent, #lowdownContent, #wrenchbarContent{
@@ -133,7 +264,7 @@ footer{
 #paper2{
   position: relative;
   z-index: 0;
-  margin-bottom: -1%;
+  margin-bottom: -2%;
   img{
     -webkit-transform:rotate(180deg);
     margin-top: -20%;
@@ -153,19 +284,25 @@ footer{
 //working area
 .storeFrontContainer{}
 .storeFront{
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         3px 3px 10px 0px rgba(50, 50, 50, 0.75);
   @media #{$small-only}{
     margin-bottom: 4%;
   }
   @media #{$medium-up} {
-    width: 70%;
+    width: 50%;
     height: auto;
     float: left;
     margin-right: 3%;
+
   }
 }
 
 
 .orbit-container{
+  position: relative;
+  z-index: 3 !important;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -179,17 +316,96 @@ footer{
   }
 }
 #goodsItems{
-  h3{
-    white-space: nowrap;
-    overflow: hidden;
-  }
+
 }
 
 #subContent{
-  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
 }
 #subContent, #goodsItems{
   margin-top: 1em;
 }
+
+
+
+
+
+.wrenchBarImage1{
+  @media #{$small-only} {
+    margin-bottom: 4%;
+  }
+}
+.wrenchBarImage2{
+
+}
+
+.wrenchBarCaption1{
+
+  position: relative;
+  z-index: 1;
+
+}
+.wrenchBarCaption2{
+
+  position: relative;
+  z-index: 1;
+
+}
+.wrenchBarMenu{
+  text-align: center;
+  color: #e93502 !important;
+}
+.wrenchBarCategory{
+  text-align: center;
+  color: #e93502 !important;
+  margin-bottom: 4%;
+  border-bottom: 2px solid #ffe7b4;
+
+}
+
+#tuneups{
+
+  .tuneup{
+    color: #ffe7b4 !important;
+    padding: 8px;
+    span{
+      font-family: headerFont;
+      font-size: 180%;
+      border-bottom: 2px solid #ffe7b4;
+    }
+  }
+}
+.tuneupNote{
+  color: #ffe7b4 !important;
+}
+.wrenchBarTitle{
+
+}
+
+#socialMedia{
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding-top: 2px;
+  float: right;
+  img{
+    height: 30px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 

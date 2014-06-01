@@ -11,14 +11,14 @@
   #parallaxGradient{
     z-index: 4;
     position: absolute;
-    // background-image:linear-gradient(45deg, rgba(117,117,117, .9) 0%, rgba(206,145,12, .9) 50%,  rgba(117,117,117, .9) 100%);
+    background-image:linear-gradient(45deg, rgba(117,117,117, .65) 0%, rgba(206,145,12, .85) 50%,  rgba(117,117,117, .65) 100%);
   }
 }
 
 #eastSideLogo{
   position: absolute;
   z-index:  5;
-  top: 12%;
+  top: 10%;
   width: 80%;
   margin: 0 auto;
   left: 10%;
@@ -29,7 +29,7 @@
 }
 
 #parallaxCaption{
-  top: 35%;
+  top: 38%;
   margin: 0 auto;
   z-index: 100;
   width: 100%;
@@ -55,7 +55,7 @@
   height: auto;
   z-index: 5;
   width: 9%;
-  top: 49%;
+  top: 57%;
   left: 45.5%;
   img{
 

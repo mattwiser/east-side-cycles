@@ -22,11 +22,11 @@ $(document).ready(initialize);
 $(document).foundation({
   orbit: {
     animation: 'fade',
-    timer_speed: 2500,
+    timer_speed: 7000,
     slide_number: false,
     animation_speed: 700,
     pause_on_hover: false,
-    timer: false,
+    timer: true,
     timer_progress_class: 'test',
     bullets: false
   }
@@ -39,19 +39,20 @@ $(window).load(function(){
   subContentResize();
   parallaxResize();
   parallaxFade();
-
+  goodsImage();
+  $('.goodsImage').on("click", function(e){
+    goodsImage(e);
+  });
 });
 
 function initialize(){
-  parallaxSkrollrData();
-  skrollrInit();
+
   $(window).on("resize", setWidth);
   $(window).on("resize", navOffset);
   $(window).on("resize", subContentResize);
   $(window).on("resize", parallaxResize);
   $(window).on("resize", parallaxAffix);
   $(window).on("scroll", parallaxAffix);
-
   window.setInterval(parallaxFade, 15000);
 }
 //end initalize document and foundation
@@ -59,14 +60,19 @@ function initialize(){
 //===========================================================================================================//
 //===========================================================================================================//
 //===========================================================================================================//
-function skrollrInit(){
-  if (!isTouch) {
-    var s = skrollr.init({
-      render: function(data){},
-      forceHeight:false,
-      smoothScroll:true
-    });
-  };
+function goodsImage(e){
+  if (e) {
+    var target = $(e.target);
+    var isActive = target.hasClass("goodsImageActive");
+    var allImages = $(".goodsImage");
+
+    if (!isActive) {
+      allImages.removeClass("goodsImageActive")
+      target.addClass("goodsImageActive");
+    } else if (isActive) {
+      target.removeClass("goodsImageActive");
+    }
+  }
 }
 
 function setWidth(){
@@ -167,29 +173,6 @@ function parallaxAffix(){
     }
   }
 }
-function parallaxSkrollrData(){
-  if (parallaxCheck && !isTouch) {
-    var gradient = $( "#parallaxGradient");
-    var height = $(".parallaxImage").height();
-
-    height = height * .75;
-    height = Math.round(height);
-
-    var string = height.toString();
-    var data = $(gradient).data();
-    var keys = $.map(data , function(value, key) { return key; });
-
-    if (!keys.length) {
-      $(gradient).attr( "data-0", "background-image:linear-gradient(45deg, rgba(117,117,117, .65) 0%, rgba(206,145,12, .85) 50%,  rgba(117,117,117, .65) 100%);" );
-      $(gradient).attr( "data-"+string, "background-image:linear-gradient(0deg, rgba(117,117,117, 1) 0%, rgba(206,145,12, 1) 50%,  rgba(117,117,117, 1) 100%);");
-      $(gradient).data( "data-0", "background-image:linear-gradient(45deg, rgba(117,117,117, .65) 0%, rgba(206,145,12, .85) 50%,  rgba(117,117,117, .65) 100%);" );
-      $(gradient).data( "data-"+string, "background-image:linear-gradient(0deg, rgba(117,117,117, 1) 0%, rgba(206,145,12, 1) 50%,  rgba(117,117,117, 1) 100%);");
-    } else {
-      console.log("attr and data already present");
-    }
-  }
-}
-
 
 var logoMover = function(){
   var logos = $(".logo");

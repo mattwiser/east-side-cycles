@@ -8,18 +8,93 @@ block content
   #paper
     img(src="../img/paperEdge1.png")
   .row#lowdownContent
-    .small-12.medium-5.columns
-      h2
-        | East Nasty's Go To Cycle Shop
+    .small-12.medium-6.columns
+      h2.headerTitle
+        | Lowdown >>
+        span
+          |  A Splattering of Detail
       p
-        | Eastside Cycles is a family owned full service bicycle shop. We sell, rent, and repair bicycles. We've been known to ride them occasionally too! Visit us right in the middle of 5 Points.
-      .button.large.radius
-        | Find Us!
-
-    .small-12.medium-7.columns
+        | Eastside Cycles is your one stop shop from anywhere between casual rider to experienced racer. We've been spinning wheels in East Nashville's 5 Points since 2007. Follow our
+        span
+          a.lightOrangeLink(target="_blank", href="https://www.facebook.com/EastsideCyclesNashville")  Facebook
+        |, hit us up on
+        span
+          a.lightOrangeLink(target="_blank", href="http://www.meetup.com/Eastside-Rides/")
+            |  Meetup
+        |, mesmerize yourself on
+        span
+          a.lightOrangeLink(target="_blank", href="http://bike37206.tumblr.com")
+            |  Tumblr
+        |  and keep track on
+        span
+          a.lightOrangeLink(target="_blank", href="https://twitter.com/EastsideCycles")
+            |  Twitter
+        |.
+      p
+        | Visit us at 103 South 11th Street, Nashville TN, 37206
+        br
+        strong
+          |11-7 Mon-Fri & 10-6 Sa
+          br
+          | 615-469-1079 |
+          a.lightOrangeLink(href="mailto: bikeseastside@gmail.com?Subject=Website%20Inquiry")  bikeseastside@gmail.com
+    .small-12.medium-6.columns
+        #mapAnchor
         iframe(  width="100%", height="400", frameborder="0", style="border:0",src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA3fyxbe5LkY3-EkWdwHDFREhHWXK2i1hM&q=East+Side+Cycles,Nashville+TN")
+  #paper2
+    img(src="../img/paperEdge1.png")
 
-  include ./partials/_subContent
+  .row#lowdownColor
+    .small-12.large-10.large-centered.columns.end
+      .row.collapse
+        .small-12.columns
+          .panel.lowdownCategory.lowdownOffset
+            #adventuresAnchor
+            img.th.lowdownImage(src="../img/advent1.jpg")
+            h2.lowdownInfo.orangeLinkSmall Adventures
+            p.lowdownCaption See Nashville and the middle Tennessee surround on a bike. Stop by the shop or give us a call. Check our Guide section for ideas on cool trails, where to ride. Make our knowledge of the area your asset in planning a memorable Nashville biking experience.
+            .clearfix
+        .small-12.columns
+          .panel.lowdownCategory#customBuilds
+            img.th.lowdownImage(src="../img/custom1.jpg")
+            h2.lowdownInfo.orangeLinkSmall Custom Builds
+            p.lowdownCaption If you have a custom bike in mind and don't see one on the floor that meets your needs, tap our enthusiasm for selecting components and frames, and rendering your own ride.
+            .clearfix
+      .row.collapse
+        .small-12.columns
+          .panel.lowdownCategory
+            #apparelAnchor
+            img.th.lowdownImage(src="../img/apparel1.jpg")
+            h2.lowdownInfo.orangeLinkSmall Apparel
+            p.lowdownCaption We offer Louis Garneau and Cannondale fine cycling apparel, as well as Tifosi and Smith eyewear. Our own Eastside Jerseys aren't too shabby either.
+            .clearfix
+        .small-12.columns
+          .panel.lowdownCategory
+            #partsAnchor
+            img.th.lowdownImage(src="../img/parts1.jpg")
+            h2.lowdownInfo.orangeLinkSmall Parts & Accessories
+            p.lowdownCaption Check out our full line of parts and accessories for you cycling needs and repairs, including Shimano pedals and components, urban and commuter cycling gear, Louis Garneau shoes and helmets, Brooks saddles, Electra accessories, Serfas products, and many more.
+            .clearfix
+      .row.collapse
+        .small-12.columns
+          .panel.lowdownCategory
+            #rentalsAnchor
+            img.th.lowdownImage(src="../img/rental1.jpg")
+            h2.lowdownInfo.orangeLinkSmall Rentals
+            p.lowdownCaption We rent Electra Townies for your trips around the city and various full suspension mountain bikes for you trips through the woods. Then there's the classic Electra Hellbetty Tandem, perfect for marriages and other occasions.
+            .clearfix
+
+        .small-12.columns.end
+          h2.lowdownInfo.orangeLinkSmall Bios
+          p Coming Soon
+
+
+
+
+
+
+
+    include ./partials/_lowdownSubContent
 
 
 

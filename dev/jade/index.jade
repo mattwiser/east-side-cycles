@@ -10,37 +10,29 @@ block content
   .row#indexContent
     .small-12.columns
       h2.headerTitle
-        | Home >> Historic East Nashville
+        | Home >>
+        span
+          |  Historic East Nashville
     .small-12.large-7.columns
       img.storeFront(src="../img/storeFronts.jpg")
       p.mainCaption1
-        |  Eastside Cycles is a family owned full service bicycle shop. We sell, rent, and repair bicycles. We've been known to ride them occasionally too! Visit us right in the middle of 5 Points.
+        |  Eastside Cycles is a family owned full service bicycle shop. We sell, rent, and repair bicycles. We've been known to ride them occasionally too!
+        a.lightOrangeLink(target="_blank", href="https://www.google.com/maps/preview?ll=36.177274,-86.749828&z=16&t=m&hl=en-US&gl=US&mapclient=embed&cid=14401112091919539240")
+          |  Visit us right in the middle of 5 Points.
       p.mainCaption2
-        | Rides N Whatnot, Keep the Rubber Side Down. Meet up with us and lick up the cycling goodness with a follow on tumblr or Facebook. Oh, and let us get between your legs.
+        | With an unquenchable thirst for all things biking, Scott de Shon built the shop to promote cycling throughout Nashville and beyond. An expert-level mountain-bike racer, experienced bike mechanic and personal trainer, Scott has managed bike shops in Florida and Tennessee. Eastside Cycles has won the Nashville Scene’s “Best Bike Shop” award numerous times since 2007 - and continues to push the envelope of cycling excellence.
       p.mainCaption2
-        | Rides N Whatnot, Keep the Rubber Side Down. Meet up with us and lick up the cycling goodness with a follow on tumblr or Facebook. Oh, and let us get between your legs.
+        | Visit us at 103 South 11th Street, Nashville TN, 37206
+        br
+        span.schedule
+          | 11-7 Mon-Fri & 10-6 Sat
+
 
     .small-12.large-5.columns
       include ./partials/_orbit
 
-  include ./partials/_subContent
 
-
-
-
-
-  //-     .row.collapse
-  //-       .small-12.medium-6.columns
-  //-         img(src="../img/storeFronts.jpg")
-  //-       .small-12.medium-6.columns
-  //-         p.mainCaption
-  //-           | Eastside Cycles is a family owned full service bicycle shop. We sell, rent, and repair bicycles. We've been known to ride them occasionally too! Visit us right in the middle of 5 Points.
-  //-         p.mainCaption
-  //-           | Rides N Whatnot, Keep the Rubber Side Down. Meet up with us and lick up the cycling goodness with a follow on tumblr or Facebook. Oh, and let us get between your legs.
-  //-     .row.collapse
-  //-       .small-12.columns
-  //-         h4
-  //-           | Solid Dependable Silent
-  //-         h4
-  //-           | My bike is my horse, my fighter jet, myisland, my friend.
-  //-
+  #paper2
+    img(src="../img/paperEdge1.png")
+  #indexColor
+    include ./partials/_homeSubContent

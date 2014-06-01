@@ -3,22 +3,32 @@ block offers
   #paper
     img(src="../img/paperEdge1.png")
   .row#goodsContent
-    .small-12.large-7.columns
+    .small-12.columns
       h2.headerTitle
-        | Goods >> Where the Rubber hits the Road
+        | Goods >>
+        span
+          |  Where the Rubber hits the Road
+    .small-12.medium-6.large-7.columns
       p
         | Scroll through our prime line up and special deals. Drop by 5 points where our knowldegeable staff is ready to assist every level of cycling enthusiasm. Monday through Friday 11-7 or Saturday 10-6.
       p
         | Questions or Rental Inquiries? Call us at (615)-469-1079
       .row.collapse
         .small-12.columns
-          img.goodsLogo(src="../img/brandLogo_1.png")
-          img.goodsLogo(src="../img/brandLogo_2.png")
-          img.goodsLogo(src="../img/brandLogo_3.png")
-          img.goodsLogo(src="../img/brandLogo_4.png")
-          img.goodsLogo(src="../img/brandLogo_5.png")
-          img.goodsLogo(src="../img/purefix.png")
-    .small-12.large-5.columns
+          #goodsLogos
+            a.goodsLogo(href="http://www.giant-bicycles.com/", target="_blank")
+              img(src="../img/Giant.png")
+            a.goodsLogo(href="http://www.konaworld.com/", target="_blank")
+              img(src="../img/Kona.png")
+            a.goodsLogo(href="http://www.cannondale.com/", target="_blank")
+              img(src="../img/Cannondale.png")
+            a.goodsLogo(href="http://www.electrabike.com/", target="_blank")
+              img(src="../img/Electra.png")
+            a.goodsLogo(href="http://surlybikes.com/", target="_blank")
+              img(src="../img/Surly.png")
+            a.goodsLogo(href="http://purefixcycles.com/", target="_blank")
+              img(src="../img/purefix.png")
+    .small-12.medium-6.large-5.columns
       include ./partials/_orbit
   #paper2
     img(src="../img/paperEdge1.png")
@@ -29,6 +39,7 @@ block offers
 block content
   #goodsColor
     include ./partials/_goodsItems
+    include ./partials/_goodsSubContent
 
 
 

@@ -766,7 +766,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-$panel-bg: rgb(96, 96, 96);
+// $panel-bg: rgb(96, 96, 96);
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 
@@ -1029,29 +1029,29 @@ $panel-bg: rgb(96, 96, 96);
 
 // Tables
 
-// $include-html-table-classes: $include-html-classes;
+$include-html-table-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
-// $table-bg: #fff;
-// $table-even-row-bg: #f9f9f9  ;
+$table-bg: rgba(44, 28, 14, 0.5);
+$table-even-row-bg: rgba(84, 82, 9, 0.3)  ;
 
 // These control the table cell border style
-// $table-border-style: solid;
-// $table-border-size: 1px;
-// $table-border-color: #ddd;
+$table-border-style: solid;
+$table-border-size: 1px;
+$table-border-color: #2c1c0e;
 
 // These control the table head styles
 // $table-head-bg: #f5f5f5  ;
-// $table-head-font-size: rem-calc(14);
-// $table-head-font-color: #222;
+$table-head-font-size: rem-calc(18);
+$table-head-font-color: #FCF1D9;
 // $table-head-font-weight: bold;
 // $table-head-padding: rem-calc(8 10 10);
 
 // These control the row padding and font styles
 // $table-row-padding: rem-calc(9 10);
-// $table-row-font-size: rem-calc(14);
-// $table-row-font-color: #222;
-// $table-line-height: rem-calc(18);
+$table-row-font-size: rem-calc(16);
+$table-row-font-color: #FCF1D9;
+$table-line-height: rem-calc(20);
 
 // These are for controlling the display and margin of tables
 // $table-display: table-cell;
