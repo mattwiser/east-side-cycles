@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: bodyFont;
-  src: url(../img/fonts/droid.woff); }
+  src: url(../img/fonts/droid.ttf); }
 
 @font-face {
   font-family: navFont;
-  src: url(../img/fonts/banausia.woff); }
+  src: url(../img/fonts/banausia.ttf); }
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
