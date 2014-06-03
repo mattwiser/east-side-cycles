@@ -12,8 +12,15 @@
     margin-right: 1%;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
     -webkit-transform:translateX(-500%);
     -moz-transform:translateX(-500%);
+    -ms-transform:translateX(-500%);
+    -o-transform:translateX(-500%);
+    transform:translateX(-500%);
   }
 
   #kona{
@@ -22,8 +29,15 @@
     margin-right: 0.5%;
     -webkit-transition: all 0.75s;
     -moz-transition: all 0.75s;
+    -ms-transition: all 0.75s;
+    -o-transition: all 0.75s;
+    transition: all 0.75s;
+
     -webkit-transform:translateX(-620%);
     -moz-transform:translateX(-620%);
+    -ms-transform:translateX(-620%);
+    -o-transform:translateX(-620%);
+    transform:translateX(-620%);
   }
 
   #cannondale{
@@ -32,8 +46,15 @@
     margin-right: 1%;
     -webkit-transform:translateX(-380%);
     -moz-transform:translateX(-380%);
+    -ms-transform:translateX(-380%);
+    -o-transform:translateX(-380%);
+    transform:translateX(-380%);
+
     -webkit-transition: all 0.75s;
     -moz-transition: all 0.75s;
+    -ms-transition: all 0.75s;
+    -o-transition: all 0.75s;
+    transition: all 0.75s;
 
   }
 
@@ -43,8 +64,15 @@
     margin-right: 1%;
     -webkit-transform:translateX(-520%);
     -moz-transform:translateX(-520%);
+    -ms-transform:translateX(-520%);
+    -o-transform:translateX(-520%);
+    transform:translateX(-520%);
+
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
   }
 
   #surly{
@@ -53,17 +81,30 @@
     margin-right: 1.5%;
     -webkit-transform:translateX(-670%);
     -moz-transform:translateX(-670%);
+    -ms-transform:translateX(-670%);
+    -o-transform:translateX(-670%);
+    transform:translateX(-670%);
+
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
   }
 
   #purefix{
     width: 14.5%;
     -webkit-transform:translateX(-670%);
     -moz-transform:translateX(-670%);
+    -ms-transform:translateX(-670%);
+    -o-transform:translateX(-670%);
+    transform:translateX(-670%);
+
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
-
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
   }
 
   .logo{
@@ -87,6 +128,9 @@
 .translateX{
   -webkit-transform:translateX(0%) !important;
   -moz-transform:translateX(0%) !important;
+  -ms-transform:translateX(0%) !important;
+  -o-transform:translateX(0%) !important;
+  transform:translateX(0%) !important;
 }
 
 #logoContainer{
@@ -94,10 +138,18 @@
     opacity: 1;
     transition: all 0.33s;
     -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
     img{
       opacity: 1;
       transition: all 0.33s;
       -webkit-transform:scale(1.1);
+      -moz-transform:scale(1.1);
+      -ms-transform:scale(1.1);
+      -o-transform:scale(1.1);
+      transform:scale(1.1);
     }
   }
 }

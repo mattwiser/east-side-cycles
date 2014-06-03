@@ -106,11 +106,16 @@
   .subContentEffect{
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
+    transform: scale(1.2);
     opacity: 1;
     img{
       -webkit-transform: rotate(360deg);
       -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
       transition: all .75s;
     }
     transition: all .75s;
@@ -119,7 +124,9 @@
   .subContentEffect1{
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
+    transform: scale(1.2);
     opacity: 1;
     transition: all .75s;
   }
@@ -127,7 +134,9 @@
   .subContentEffect2{
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
+    transform: scale(1.2);
     opacity: 1;
     transition: all .75s;
   }
