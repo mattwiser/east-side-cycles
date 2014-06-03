@@ -6154,6 +6154,7 @@ footer {
   width: auto;
   height: auto;
   margin: 0;
+  padding-left: 1.7%;
   padding-top: 2px;
   float: left;
   display: inline-block; }
@@ -6231,7 +6232,7 @@ footer {
 .footerInfo {
   margin: 0;
   padding: 0;
-  color: #ffe7b4 !important;
+  color: #8F7938 !important;
   float: left;
   margin-left: 35%;
   font-size: 12px;
@@ -6240,6 +6241,7 @@ footer {
 
 .zeitvox {
   float: right;
-  margin-right: 1%; }
+  margin-right: 1%;
+  margin-top: 0.7%; }
   .zeitvox img {
-    height: 30px; }
+    height: 24px; }
