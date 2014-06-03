@@ -1033,7 +1033,7 @@ $include-html-table-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
 $table-bg: rgba(44, 28, 14, 0.5);
-$table-even-row-bg: rgba(84, 82, 9, 0.3)  ;
+$table-even-row-bg: rgba(9,69,112,0.3);
 
 // These control the table cell border style
 $table-border-style: solid;
@@ -1043,14 +1043,14 @@ $table-border-color: #2c1c0e;
 // These control the table head styles
 // $table-head-bg: #f5f5f5  ;
 $table-head-font-size: rem-calc(18);
-$table-head-font-color: #FCF1D9;
+$table-head-font-color: #ffe7b4;
 // $table-head-font-weight: bold;
 // $table-head-padding: rem-calc(8 10 10);
 
 // These control the row padding and font styles
 // $table-row-padding: rem-calc(9 10);
 $table-row-font-size: rem-calc(16);
-$table-row-font-color: #FCF1D9;
+$table-row-font-color: #ffe7b4;
 $table-line-height: rem-calc(20);
 
 // These are for controlling the display and margin of tables
@@ -1087,7 +1087,7 @@ $include-html-media-classes: $include-html-classes;
 $thumb-border-width: 4px;
 $thumb-border-color: white;
 // $thumb-box-shadow: 0 0 0 1px rgba(#000,.2);
-// $thumb-box-shadow-hover: 0 0 30px 1px rgba($primary-color,0.5);
+$thumb-box-shadow-hover: 0 0 30px 1px rgba(233, 53, 2,0.5);
 
 // Radius and transition speed for thumbs
 // $thumb-radius: $global-radius;
@@ -1144,11 +1144,11 @@ $topbar-dropdown-link-color: $topbar-bg-color;
 $topbar-dropdown-link-bg: $topbar-bg-color;
 // $topbar-dropdown-link-weight: normal;
 // $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-color: rgba(225, 231, 180, 1);
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: $link-color;
+$topbar-link-color: #ffe7b4;
 $topbar-link-color-hover: $link-color;
 $topbar-link-color-active: $link-color;
 $topbar-link-color-active-hover: $link-color;
@@ -1180,8 +1180,8 @@ $topbar-menu-icon-color: $link-color;
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
-$topbar-breakpoint: #{upper-bound($medium-range)}; // Change to 9999px for always mobile layout
-$topbar-media-query: "only screen and (min-width: #{upper-bound($medium-range)})";
+$topbar-breakpoint: #{upper-bound($small-range)}; // Change to 9999px for always mobile layout
+$topbar-media-query: "only screen and (min-width: #{upper-bound($small-range)})";
 
 // Divider Styles
 $topbar-divider-border-bottom: solid 1px  scale-color(rgba(99,235, 178, 0.2), $lightness: 13%);

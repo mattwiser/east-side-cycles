@@ -30,6 +30,7 @@ block content
           a.lightOrangeLink(target="_blank", href="https://twitter.com/EastsideCycles")
             |  Twitter
         |.
+
       p
         | Visit us at 103 South 11th Street, Nashville TN, 37206
         br
@@ -38,6 +39,18 @@ block content
           br
           | 615-469-1079 |
           a.lightOrangeLink(href="mailto: bikeseastside@gmail.com?Subject=Website%20Inquiry")  bikeseastside@gmail.com
+      #socialMediaBody
+        a(title="Facebook", href="https://www.facebook.com/EastsideCyclesNashville")
+          img(src="../img/Facebook.png")
+        a(title="Twitter", href="https://www.facebook.com/EastsideCyclesNashville")
+          img(src="../img/Twitter.png")
+        a(title="Tumblr",href="http://bike37206.tumblr.com/")
+          img(src="../img/Tumblr.png")
+        a(href="http://www.meetup.com/Eastside-Rides/")
+          img(title="MeetUp",src="../img/MeetUp.png")
+        a(title="E-Mail",href="mailto: bikeseastside@gmail.com?Subject=Website%20Inquiry")
+          img(src="../img/E-mail.png")
+
     .small-12.medium-6.columns
         #mapAnchor
         iframe(  width="100%", height="400", frameborder="0", style="border:0",src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA3fyxbe5LkY3-EkWdwHDFREhHWXK2i1hM&q=East+Side+Cycles,Nashville+TN")
@@ -52,7 +65,11 @@ block content
             #adventuresAnchor
             img.th.lowdownImage(src="../img/advent1.jpg")
             h2.lowdownInfo.orangeLinkSmall Adventures
-            p.lowdownCaption See Nashville and the middle Tennessee surround on a bike. Stop by the shop or give us a call. Check our Guide section for ideas on cool trails, where to ride. Make our knowledge of the area your asset in planning a memorable Nashville biking experience.
+            p.lowdownCaption See Nashville and the middle Tennessee surround on a bike. Stop by the shop or give us a call.
+              span
+                a.orangeLinkSmall(href="./events.html#guideAnchor")
+                  |  Check our Guide section
+              |  for ideas on cool trails, where to ride. Make our knowledge of the area your asset in planning a memorable Nashville biking experience.
             .clearfix
         .small-12.columns
           .panel.lowdownCategory#customBuilds
@@ -85,8 +102,8 @@ block content
             .clearfix
 
         .small-12.columns.end
-          h2.lowdownInfo.orangeLinkSmall Bios
-          p Coming Soon
+          //- h2.lowdownInfo.orangeLinkSmall Bios
+          //- p Coming Soon
 
 
 

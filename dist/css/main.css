@@ -1,10 +1,6 @@
 @font-face {
   font-family: headerFont;
-  src: url(../img/fonts/banausia.woff); }
-
-@font-face {
-  font-family: subContentFont;
-  src: url(../img/fonts/BOYCOTT.woff); }
+  src: url(../img/fonts/banausia.ttf); }
 
 @font-face {
   font-family: bodyFont;
@@ -3801,15 +3797,15 @@ table {
       padding: 0.5rem 0.625rem 0.625rem;
       font-size: 1.125rem;
       font-weight: bold;
-      color: #fcf1d9;
+      color: #ffe7b4;
       text-align: left; }
   table tr th,
   table tr td {
     padding: 0.5625rem 0.625rem;
     font-size: 1rem;
-    color: #fcf1d9; }
+    color: #ffe7b4; }
   table tr.even, table tr.alt, table tr:nth-of-type(even) {
-    background: rgba(84, 82, 9, 0.3); }
+    background: rgba(9, 69, 112, 0.3); }
   table thead tr th,
   table tfoot tr th,
   table tbody tr td,
@@ -3910,8 +3906,8 @@ table {
   -moz-transition: all 200ms ease-out;
   transition: all 200ms ease-out; }
   .th:hover, .th:focus {
-    -webkit-box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
-    box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5); }
+    -webkit-box-shadow: 0 0 30px 1px rgba(233, 53, 2, 0.5);
+    box-shadow: 0 0 30px 1px rgba(233, 53, 2, 0.5); }
   .th.radius {
     -webkit-border-radius: 3px;
     border-radius: 3px; }
@@ -3991,8 +3987,8 @@ table {
     top: 50%;
     margin-top: -5px; } }
 meta.foundation-mq-topbar {
-  font-family: "/only screen and (min-width: 64em)/";
-  width: 64em; }
+  font-family: "/only screen and (min-width: 40em)/";
+  width: 40em; }
 
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
@@ -4058,7 +4054,7 @@ meta.foundation-mq-topbar {
       margin: 0; }
       .top-bar .name h1 a {
         font-weight: normal;
-        color: white;
+        color: #ffe7b4;
         width: 50%;
         display: block;
         padding: 0 15px; }
@@ -4067,7 +4063,7 @@ meta.foundation-mq-topbar {
     right: 0;
     top: 0; }
     .top-bar .toggle-topbar a {
-      color: white;
+      color: #ffe7b4;
       text-transform: uppercase;
       font-size: 0.8125rem;
       font-weight: bold;
@@ -4132,7 +4128,7 @@ meta.foundation-mq-topbar {
   .top-bar-section ul li > a {
     display: block;
     width: 100%;
-    color: white;
+    color: #ffe7b4;
     padding: 12px 0 12px 0;
     padding-left: 15px;
     font-family: navFont;
@@ -4177,7 +4173,7 @@ meta.foundation-mq-topbar {
       width: 0;
       height: 0;
       border: inset 5px;
-      border-color: transparent transparent transparent rgba(255, 255, 255, 0.4);
+      border-color: transparent transparent transparent rgba(225, 231, 180, 0.4);
       border-left-style: solid;
       margin-right: 15px;
       margin-top: -4.5px;
@@ -4205,7 +4201,7 @@ meta.foundation-mq-topbar {
       .top-bar-section .dropdown li.title h5 {
         margin-bottom: 0; }
         .top-bar-section .dropdown li.title h5 a {
-          color: white;
+          color: #ffe7b4;
           line-height: 22.5px;
           display: block; }
       .top-bar-section .dropdown li.has-form {
@@ -4223,7 +4219,7 @@ meta.foundation-mq-topbar {
 .js-generated {
   display: block; }
 
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 40em) {
   .top-bar {
     background: rgba(0, 0, 0, 0);
     *zoom: 1;
@@ -4289,7 +4285,7 @@ meta.foundation-mq-topbar {
         width: 0;
         height: 0;
         border: inset 5px;
-        border-color: rgba(255, 255, 255, 0.4) transparent transparent transparent;
+        border-color: rgba(225, 231, 180, 0.4) transparent transparent transparent;
         border-top-style: solid;
         margin-top: -2.5px;
         top: 22.5px; }
@@ -5642,9 +5638,29 @@ caption {
   font-weight: bold;
   font-size: 1.125rem; }
 
+.orangeLink:hover {
+  color: orange; }
+
 .lightOrangeLink {
   color: #e95402;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: helvetica; }
+
+.lightOrangeLink:hover {
+  color: #205C4B !important; }
+
+.addressPanel {
+  background-image: url(../img/black-paper.png);
+  background-color: #2c1c0e;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center; }
+  @media only screen and (max-width: 40em) {
+    .addressPanel {
+      width: 100%; } }
+  .addressPanel p {
+    font-size: 110% !important;
+    color: #ffe7b4 !important; }
 
 .schedule {
   font-family: helvetica;
@@ -5697,14 +5713,14 @@ caption {
     .lowdownCaption {
       width: 45%; } }
 
-#mapAnchor, #rentalsAnchor, #adventuresAnchor, #apparelAnchor, #partsAnchor {
+#goods1, #goods2, #goods3, #mapAnchor, #rentalsAnchor, #adventuresAnchor, #apparelAnchor, #partsAnchor, #guideAnchor {
   position: relative;
   height: 1px;
   bottom: 45px; }
 
 .title {
-  color: #ffe7b4 !important;
-  font-size: 140%;
+  color: orange !important;
+  font-size: 130%;
   font-family: bodyFont; }
 
 .price {
@@ -5725,7 +5741,23 @@ caption {
   #goodsLogos {
     width: 86%; } }
 #goodsLogos .goodsLogo {
-  display: inline-block; }
+  display: inline-block;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+#goodsLogos .goodsLogo:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
 #goodsLogos .goodsLogo:nth-of-type(1) {
   width: 28%; }
 #goodsLogos .goodsLogo:nth-of-type(2) {
@@ -6066,6 +6098,16 @@ footer {
 @media only screen and (max-width: 40em) {
   .wrenchBarImage1 {
     margin-bottom: 4%; } }
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .wrenchBarImage1 {
+    width: 45%;
+    float: left;
+    margin-right: 2%; } }
+@media only screen and (min-width: 64.063em) {
+  .wrenchBarImage1 {
+    width: 38%;
+    float: left;
+    margin-right: 2%; } }
 
 .wrenchBarCaption1 {
   position: relative;
@@ -6083,27 +6125,121 @@ footer {
   text-align: center;
   color: #e93502 !important;
   margin-bottom: 4%;
-  border-bottom: 2px solid #ffe7b4; }
+  border-bottom: 2px solid #2c1c0e; }
 
 #tuneups .tuneup {
   color: #ffe7b4 !important;
   padding: 8px; }
   #tuneups .tuneup span {
     font-family: headerFont;
+    color: orange !important;
     font-size: 180%;
-    border-bottom: 2px solid #ffe7b4; }
+    border-bottom: 2px solid #2c1c0e; }
 
 .tuneupNote {
   color: #ffe7b4 !important; }
+
+@media only screen and (max-width: 40em) {
+  #socialMediaBody {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 5%; }
+    #socialMediaBody img {
+      height: auto;
+      width: 18%;
+      margin: 0;
+      padding: 0; } }
 
 #socialMedia {
   width: auto;
   height: auto;
   margin: 0;
   padding-top: 2px;
-  float: right; }
+  float: left;
+  display: inline-block; }
   #socialMedia img {
     height: 30px;
     width: auto;
     margin: 0;
     padding: 0; }
+
+#eventsOffset {
+  margin-top: 1%; }
+
+#eventsContent {
+  width: 90%;
+  margin: 0 auto; }
+  #eventsContent #guideContainer {
+    text-align: center;
+    margin: 0 auto; }
+  #eventsContent #resourceContainer {
+    text-align: center;
+    margin: 0 auto; }
+  #eventsContent #appContainer {
+    text-align: center; }
+
+.eventsHeader {
+  color: #e93502 !important;
+  text-align: center; }
+
+.eventDivider {
+  color: #ffe7b4 !important;
+  font-size: 120%; }
+
+.eventLink {
+  color: #ffe7b4;
+  font-size: 120%;
+  display: block; }
+
+#eventAppLinks {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center; }
+
+.eventLinkApp {
+  display: inline-block;
+  color: #ffe7b4;
+  font-size: 120%; }
+
+.eventLinkApp:nth-of-type(2) {
+  margin-left: 20%;
+  margin-right: 20%; }
+  @media only screen and (max-width: 40em) {
+    .eventLinkApp:nth-of-type(2) {
+      margin-left: 10%;
+      margin-right: 10%; } }
+
+.eventLinkApp:hover, .eventLink:hover {
+  color: orange; }
+
+.greenEventInfo {
+  color: #205C4B !important;
+  font-weight: bold;
+  font-family: helvetica; }
+  .greenEventInfo span {
+    color: black;
+    font-weight: normal;
+    font-family: bodyFont; }
+
+.eventImage {
+  float: left;
+  margin-right: 12px; }
+
+.eventInfo {
+  color: #ffe7b4 !important; }
+
+.footerInfo {
+  margin: 0;
+  padding: 0;
+  color: #ffe7b4 !important;
+  float: left;
+  margin-left: 35%;
+  font-size: 12px;
+  padding-top: 1%;
+  text-align: center; }
+
+.zeitvox {
+  float: right;
+  margin-right: 1%; }
+  .zeitvox img {
+    height: 30px; }
