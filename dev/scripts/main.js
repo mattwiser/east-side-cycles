@@ -34,18 +34,16 @@ $(document).foundation({
 
 //waits for all content(i.e. images) to load
 $(window).load(function(){
-  setWidth();
-  navOffset();
   subContentResize();
-  parallaxResize();
-  parallaxFade();
-  goodsImage();
-  $('.goodsImage').on("click", function(e){
-    goodsImage(e);
-  });
+
 });
 
 function initialize(){
+  setWidth();
+  navOffset();
+  parallaxResize();
+  parallaxFade();
+  goodsImage();
 
   $(window).on("resize", setWidth);
   $(window).on("resize", navOffset);
@@ -53,6 +51,9 @@ function initialize(){
   $(window).on("resize", parallaxResize);
   $(window).on("resize", parallaxAffix);
   $(window).on("scroll", parallaxAffix);
+    $('.goodsImage').on("click", function(e){
+    goodsImage(e);
+  });
   window.setInterval(parallaxFade, 15000);
 }
 //end initalize document and foundation
