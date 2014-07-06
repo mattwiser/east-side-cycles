@@ -172,7 +172,7 @@ caption{
   @media #{$medium-only} {
     width: 45%;
   }
-  @media #{$large-only} {
+  @media #{$large-up} {
     width: 45%;
   }
 }
@@ -260,7 +260,7 @@ caption{
 .headerTitle{
   color: #3D320D !important;
   span{
-    font-size: 82%;
+    font-size: 68%;
   }
 }
 .th{
