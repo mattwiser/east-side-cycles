@@ -20,7 +20,7 @@ block content
         a.lightOrangeLink(target="_blank", href="https://www.google.com/maps/preview?ll=36.177274,-86.749828&z=16&t=m&hl=en-US&gl=US&mapclient=embed&cid=14401112091919539240")
           |  Visit us right in the middle of 5 Points.
       p.mainCaption2
-        | With an unquenchable thirst for all things biking, Scott de Shon built the shop to promote cycling throughout Nashville and beyond.Eastside Cycles has won the Nashville Scene’s “Best Bike Shop” award numerous times since 2007 - and continues to push the envelope of cycling excellence.
+        | With an unquenchable thirst for all things biking, we built the shop to promote cycling throughout Nashville and beyond.Eastside Cycles has won the Nashville Scene’s “Best Bike Shop” award numerous times since 2007 - and continues to push the envelope of cycling excellence.
 
       p
         | Visit us at 103 South 11th Street, Nashville TN, 37206
@@ -33,7 +33,8 @@ block content
 
 
     .small-12.large-5.columns
-      include ./partials/_orbit
+      #mapAnchor
+      iframe(  width="100%", height="400", frameborder="0", style="border:0",src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCZEnrGBpSDvZfy4h-pfUV-n86n4tuR1SE&q=East+Side+Cycles,Nashville+TN")
 
 
   #paper2
